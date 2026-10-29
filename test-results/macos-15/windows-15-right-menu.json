@@ -1,0 +1,128 @@
+{
+  "windows": [
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "id": 37,
+      "y": 3,
+      "h": 18,
+      "x": 859,
+      "name": "StatusIndicator",
+      "layer": 2147483630,
+      "w": 10,
+      "owner": "Window Server"
+    },
+    {
+      "owner": "osascript",
+      "y": 598,
+      "w": 136,
+      "name": "",
+      "layer": 101,
+      "h": 164,
+      "id": 39,
+      "x": 761
+    },
+    {
+      "y": 0,
+      "layer": 25,
+      "owner": "Spotlight",
+      "w": 31,
+      "h": 24,
+      "id": 17,
+      "x": 807,
+      "name": "Item-0"
+    },
+    {
+      "id": 23,
+      "x": 838,
+      "w": 34,
+      "h": 24,
+      "y": 0,
+      "owner": "Control Center",
+      "layer": 25,
+      "name": "BentoBox"
+    },
+    {
+      "y": 0,
+      "w": 152,
+      "x": 872,
+      "owner": "Control Center",
+      "name": "Clock",
+      "layer": 25,
+      "id": 22,
+      "h": 24
+    },
+    {
+      "x": 0,
+      "owner": "Window Server",
+      "y": 0,
+      "w": 1024,
+      "id": 34,
+      "name": "Menubar",
+      "h": 24,
+      "layer": 24
+    },
+    {
+      "x": 795,
+      "y": 465,
+      "id": 38,
+      "w": 205,
+      "name": "桌面小伙伴",
+      "layer": 3,
+      "owner": "osascript",
+      "h": 285
+    },
+    {
+      "id": 35,
+      "w": 1024,
+      "name": "",
+      "owner": "osascript",
+      "x": 0,
+      "h": 768,
+      "y": 0,
+      "layer": 0
+    }
+  ],
+  "screens": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "vx": 0,
+      "vy": 0,
+      "vw": 1024,
+      "vh": 743,
+      "scale": 1
+    }
+  ],
+  "swift_windows": 8
+}

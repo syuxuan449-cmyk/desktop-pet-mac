@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "h": 18,
-      "layer": 2147483630,
-      "x": 859,
-      "id": 36,
-      "w": 10,
       "owner": "Window Server",
       "name": "StatusIndicator",
+      "h": 18,
+      "w": 10,
+      "x": 859,
+      "id": 37,
+      "layer": 2147483630,
       "y": 3
     },
     {
       "name": "Item-0",
+      "y": 0,
       "w": 31,
-      "x": 807,
       "h": 24,
-      "y": 0,
       "owner": "Spotlight",
-      "id": 18,
-      "layer": 25
+      "layer": 25,
+      "x": 807,
+      "id": 17
     },
     {
-      "y": 0,
-      "owner": "Control Center",
-      "x": 838,
       "name": "BentoBox",
-      "id": 22,
+      "id": 23,
       "h": 24,
-      "layer": 25,
-      "w": 34
-    },
-    {
-      "layer": 25,
       "y": 0,
-      "w": 152,
-      "h": 24,
-      "owner": "Control Center",
-      "id": 21,
-      "x": 872,
-      "name": "Clock"
+      "x": 838,
+      "layer": 25,
+      "w": 34,
+      "owner": "Control Center"
     },
     {
-      "owner": "Window Server",
-      "name": "Menubar",
-      "layer": 24,
-      "id": 29,
-      "x": 0,
-      "w": 1024,
+      "name": "Clock",
+      "id": 22,
+      "x": 872,
+      "w": 152,
+      "owner": "Control Center",
+      "layer": 25,
       "h": 24,
       "y": 0
     },
     {
-      "name": "桌面小伙伴",
-      "id": 37,
-      "w": 205,
-      "x": 795,
-      "h": 285,
-      "y": 465,
-      "layer": 3,
-      "owner": "osascript"
+      "h": 24,
+      "y": 0,
+      "w": 1024,
+      "id": 34,
+      "name": "Menubar",
+      "x": 0,
+      "layer": 24,
+      "owner": "Window Server"
     },
     {
-      "name": "",
+      "layer": 3,
+      "y": 465,
+      "x": 795,
+      "name": "桌面小伙伴",
+      "w": 205,
       "owner": "osascript",
-      "id": 34,
+      "id": 38,
+      "h": 285
+    },
+    {
+      "id": 35,
+      "w": 1024,
+      "x": 0,
+      "owner": "osascript",
+      "y": 0,
       "h": 768,
       "layer": 0,
-      "w": 1024,
-      "y": 0,
-      "x": 0
+      "name": ""
     }
   ],
   "screens": [
