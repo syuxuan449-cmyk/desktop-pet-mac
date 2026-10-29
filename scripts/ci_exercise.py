@@ -596,15 +596,15 @@ def check_placement_and_transparency():
     return win
 
 
-def wait_new(token, timeout):
-    """Wait until `token` appears more times than it does right now."""
-    base = read_log().count(token)
+def wait_new(token, timeout, prior=None):
+    """Wait until `token` appears more often than in `prior` (or the log right now)."""
+    base = (prior if prior is not None else read_log()).count(token)
     deadline = time.time() + timeout
     while time.time() < deadline:
         if read_log().count(token) > base:
             return True
         time.sleep(0.25)
-    return False
+    return read_log().count(token) > base
 
 
 def exercise(win):
@@ -619,6 +619,7 @@ def exercise(win):
     capture("02-bubble-gone", expand=8)
     S.mark("bubble_hides", hides, "timer")
 
+    prior = read_log()
     ok, _delta, _drv = deliver("click", screen_point(win, HEAD), "ACTION head", settle=0.35)
     capture("03-head", expand=16)
     # Hearts are drawn after the click; grab a second frame immediately.
@@ -626,24 +627,26 @@ def exercise(win):
     capture("03b-head-hearts", expand=16)
     S.mark("head_click", ok and "ACTION head" in read_log(), "log")
 
-    idle = wait_new("ACTION idle", 4)
+    idle = wait_new("ACTION idle", 4, prior)
     capture("04-after-head-idle", expand=8)
     S.mark("head_returns_idle", idle, "state timer")
 
     win, _ = fresh_window()
+    prior = read_log()
     ok, _, _ = deliver("click", screen_point(win, SPANK_ZONE), "ACTION spank", settle=0.35)
     capture("05-angry", expand=20)
     S.mark("bottom_spank", "ACTION spank" in read_log(), "log")
-    ended = wait_new("ACTION angry-end", 4)
+    ended = wait_new("ACTION angry-end", 4, prior)
     capture("06-after-angry", expand=8)
     S.mark("spank_returns_idle", ended, "angry timer")
 
     time.sleep(0.6)  # spank cooldown is 2.55s from the click; angry-end is at 2.3s
     win, _ = fresh_window()
+    prior = read_log()
     deliver("click", screen_point(win, FEED), "ACTION feed", settle=0.4)
     capture("07-feed", expand=12)
     S.mark("feed", "ACTION feed" in read_log(), "toolbar 喂食")
-    feed_idle = wait_new("ACTION idle", 4.5)
+    feed_idle = wait_new("ACTION idle", 4.5, prior)
     S.mark("feed_returns_idle", feed_idle, "state timer after feed")
     capture("08-after-feed", expand=8)
 
@@ -658,12 +661,13 @@ def exercise(win):
     S.mark("wake", "ACTION wake" in read_log(), "toolbar 醒来")
 
     win, _ = fresh_window()
+    prior = read_log()
     deliver("dclick", screen_point(win, HEAD), "ACTION dance", settle=0.25)
     capture("11-dance", expand=24)
     time.sleep(0.22)
     capture("11b-dance-2", expand=24)
     S.mark("dance", "ACTION dance" in read_log(), "double-click")
-    dance_end = wait_new("ACTION dance-end", 3)
+    dance_end = wait_new("ACTION dance-end", 3, prior)
     capture("12-after-dance", expand=8)
     S.mark("dance_ends", dance_end, "dance timer")
 
@@ -676,7 +680,10 @@ def exercise(win):
     capture("13-more-menu", expand=260, full=True)
     S.mark("more_menu", "ACTION more-menu" in read_log(), "new_windows=%s" % new_wins)
 
-    deliver("esc", (), "ACTION toolbar-hide", settle=0.45)
+    # The open menu eats the first Esc. A second Esc reaches the window.
+    deliver("esc", (), "ACTION toolbar-hide", settle=0.3)
+    if "ACTION toolbar-hide" not in read_log():
+        deliver("esc", (), "ACTION toolbar-hide", settle=0.4)
     capture("14-toolbar-hidden", expand=12)
     hidden = "ACTION toolbar-hide" in read_log()
     # Dark toolbar pixels should be gone from the bottom strip.
