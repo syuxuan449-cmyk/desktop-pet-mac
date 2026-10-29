@@ -31,64 +31,64 @@
       "layer": 0
     },
     {
-      "id": 20,
-      "h": 24,
-      "owner": "Spotlight",
-      "x": 807,
-      "y": 0,
-      "name": "Item-0",
       "w": 31,
-      "layer": 25
+      "y": 0,
+      "id": 21,
+      "h": 24,
+      "layer": 25,
+      "x": 807,
+      "name": "Item-0",
+      "owner": "Spotlight"
     },
     {
-      "y": 0,
-      "id": 22,
+      "owner": "Control Center",
       "layer": 25,
-      "name": "BentoBox",
+      "y": 0,
+      "id": 11,
       "w": 34,
       "h": 24,
       "x": 838,
-      "owner": "Control Center"
+      "name": "BentoBox"
     },
     {
-      "id": 21,
-      "name": "Clock",
-      "y": 0,
-      "owner": "Control Center",
-      "x": 872,
       "layer": 25,
-      "w": 152,
-      "h": 24
+      "h": 24,
+      "id": 10,
+      "owner": "Control Center",
+      "y": 0,
+      "name": "Clock",
+      "x": 872,
+      "w": 152
     },
     {
-      "y": 0,
+      "id": 33,
       "owner": "Window Server",
       "name": "Menubar",
-      "layer": 24,
       "w": 1024,
       "x": 0,
+      "y": 0,
       "h": 24,
-      "id": 30
+      "layer": 24
     },
     {
       "x": 795,
+      "owner": "桌面小伙伴",
+      "layer": 3,
+      "y": 465,
       "w": 205,
       "name": "桌面小伙伴",
-      "y": 465,
       "h": 285,
-      "id": 34,
-      "owner": "桌面小伙伴",
-      "layer": 3
+      "id": 35
     },
     {
+      "w": 1024,
       "name": "",
       "layer": 0,
-      "id": 33,
-      "y": 0,
+      "owner": "osascript",
       "x": 0,
-      "w": 1024,
+      "y": 0,
       "h": 768,
-      "owner": "osascript"
+      "id": 34
     }
   ],
   "screens": [

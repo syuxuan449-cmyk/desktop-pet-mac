@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "y": 3,
+      "layer": 2147483630,
+      "id": 36,
       "h": 18,
+      "w": 10,
+      "y": 3,
       "name": "StatusIndicator",
       "x": 859,
-      "layer": 2147483630,
-      "id": 35,
-      "owner": "Window Server",
-      "w": 10
+      "owner": "Window Server"
     },
     {
-      "id": 20,
-      "x": 807,
-      "w": 31,
-      "owner": "Spotlight",
-      "h": 24,
-      "name": "Item-0",
-      "y": 0,
-      "layer": 25
-    },
-    {
-      "x": 838,
-      "h": 24,
-      "owner": "Control Center",
-      "y": 0,
-      "layer": 25,
-      "w": 34,
-      "name": "BentoBox",
-      "id": 22
-    },
-    {
-      "y": 0,
-      "w": 152,
       "id": 21,
-      "h": 24,
-      "owner": "Control Center",
-      "x": 872,
+      "w": 31,
+      "name": "Item-0",
+      "x": 807,
       "layer": 25,
-      "name": "Clock"
+      "owner": "Spotlight",
+      "y": 0,
+      "h": 24
+    },
+    {
+      "w": 34,
+      "id": 11,
+      "owner": "Control Center",
+      "name": "BentoBox",
+      "layer": 25,
+      "h": 24,
+      "x": 838,
+      "y": 0
+    },
+    {
+      "name": "Clock",
+      "x": 872,
+      "h": 24,
+      "y": 0,
+      "layer": 25,
+      "id": 10,
+      "w": 152,
+      "owner": "Control Center"
     },
     {
       "h": 24,
-      "id": 30,
       "layer": 24,
-      "w": 1024,
-      "name": "Menubar",
-      "owner": "Window Server",
       "y": 0,
+      "id": 33,
+      "owner": "Window Server",
+      "name": "Menubar",
+      "w": 1024,
       "x": 0
     },
     {
-      "w": 205,
-      "y": 465,
-      "name": "桌面小伙伴",
-      "id": 36,
-      "x": 795,
-      "layer": 3,
+      "id": 37,
       "owner": "osascript",
-      "h": 285
+      "y": 465,
+      "w": 205,
+      "name": "桌面小伙伴",
+      "x": 795,
+      "h": 285,
+      "layer": 3
     },
     {
-      "h": 768,
       "y": 0,
-      "x": 0,
       "w": 1024,
-      "id": 33,
+      "name": "",
       "layer": 0,
       "owner": "osascript",
-      "name": ""
+      "id": 34,
+      "x": 0,
+      "h": 768
     }
   ],
   "screens": [

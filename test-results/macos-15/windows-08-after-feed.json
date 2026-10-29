@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "layer": 2147483630,
-      "id": 35,
-      "h": 18,
-      "name": "StatusIndicator",
-      "x": 859,
       "y": 3,
       "w": 10,
-      "owner": "Window Server"
+      "owner": "Window Server",
+      "name": "StatusIndicator",
+      "x": 859,
+      "layer": 2147483630,
+      "h": 18,
+      "id": 36
     },
     {
-      "w": 31,
-      "h": 24,
-      "y": 0,
-      "owner": "Spotlight",
-      "x": 807,
-      "layer": 25,
       "name": "Item-0",
-      "id": 20
-    },
-    {
-      "w": 34,
-      "owner": "Control Center",
-      "name": "BentoBox",
-      "id": 22,
       "h": 24,
-      "x": 838,
+      "id": 21,
+      "owner": "Spotlight",
       "y": 0,
+      "x": 807,
+      "w": 31,
       "layer": 25
     },
     {
+      "w": 34,
+      "x": 838,
       "y": 0,
-      "h": 24,
-      "id": 21,
-      "name": "Clock",
-      "x": 872,
-      "w": 152,
       "layer": 25,
-      "owner": "Control Center"
+      "name": "BentoBox",
+      "id": 11,
+      "owner": "Control Center",
+      "h": 24
     },
     {
-      "id": 30,
+      "w": 152,
+      "owner": "Control Center",
+      "layer": 25,
+      "x": 872,
+      "id": 10,
+      "y": 0,
+      "name": "Clock",
+      "h": 24
+    },
+    {
+      "owner": "Window Server",
       "layer": 24,
       "y": 0,
       "h": 24,
-      "owner": "Window Server",
-      "name": "Menubar",
       "x": 0,
-      "w": 1024
+      "w": 1024,
+      "id": 33,
+      "name": "Menubar"
     },
     {
+      "id": 37,
+      "x": 795,
       "name": "桌面小伙伴",
       "h": 285,
-      "y": 465,
-      "id": 36,
-      "x": 795,
-      "layer": 3,
       "w": 205,
+      "y": 465,
+      "layer": 3,
       "owner": "osascript"
     },
     {
-      "y": 0,
-      "name": "",
-      "id": 33,
-      "w": 1024,
-      "owner": "osascript",
-      "x": 0,
       "h": 768,
-      "layer": 0
+      "y": 0,
+      "layer": 0,
+      "w": 1024,
+      "id": 34,
+      "name": "",
+      "x": 0,
+      "owner": "osascript"
     }
   ],
   "screens": [

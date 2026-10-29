@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
+      "layer": 2147483630,
+      "name": "StatusIndicator",
+      "id": 36,
+      "x": 859,
       "w": 10,
       "owner": "Window Server",
-      "name": "StatusIndicator",
-      "x": 859,
-      "h": 18,
-      "layer": 2147483630,
-      "id": 35,
-      "y": 3
+      "y": 3,
+      "h": 18
     },
     {
-      "owner": "Spotlight",
-      "x": 807,
-      "w": 31,
-      "id": 20,
-      "layer": 25,
-      "y": 0,
       "name": "Item-0",
-      "h": 24
-    },
-    {
-      "id": 22,
-      "owner": "Control Center",
-      "name": "BentoBox",
-      "w": 34,
-      "x": 838,
-      "y": 0,
-      "h": 24,
-      "layer": 25
-    },
-    {
-      "x": 872,
-      "h": 24,
       "id": 21,
-      "owner": "Control Center",
+      "owner": "Spotlight",
       "y": 0,
+      "h": 24,
       "layer": 25,
-      "w": 152,
-      "name": "Clock"
+      "x": 807,
+      "w": 31
     },
     {
-      "w": 1024,
+      "owner": "Control Center",
+      "layer": 25,
+      "w": 34,
+      "name": "BentoBox",
+      "id": 11,
+      "x": 838,
       "h": 24,
-      "id": 30,
-      "name": "Menubar",
-      "layer": 24,
-      "x": 0,
-      "owner": "Window Server",
       "y": 0
     },
     {
-      "name": "桌面小伙伴",
-      "owner": "osascript",
-      "y": 465,
-      "h": 285,
-      "layer": 3,
-      "w": 205,
-      "x": 795,
-      "id": 36
+      "w": 152,
+      "name": "Clock",
+      "layer": 25,
+      "id": 10,
+      "h": 24,
+      "owner": "Control Center",
+      "x": 872,
+      "y": 0
     },
     {
+      "name": "Menubar",
       "id": 33,
       "x": 0,
-      "layer": 0,
-      "h": 768,
+      "owner": "Window Server",
+      "w": 1024,
+      "h": 24,
+      "layer": 24,
+      "y": 0
+    },
+    {
+      "layer": 3,
+      "w": 205,
+      "y": 465,
+      "h": 285,
+      "name": "桌面小伙伴",
+      "owner": "osascript",
+      "id": 37,
+      "x": 795
+    },
+    {
       "y": 0,
       "w": 1024,
-      "owner": "osascript",
-      "name": ""
+      "layer": 0,
+      "h": 768,
+      "name": "",
+      "x": 0,
+      "id": 34,
+      "owner": "osascript"
     }
   ],
   "screens": [

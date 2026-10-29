@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
+      "layer": 2147483630,
+      "owner": "Window Server",
       "name": "StatusIndicator",
+      "y": 3,
       "w": 10,
       "h": 18,
-      "owner": "Window Server",
-      "id": 35,
-      "y": 3,
-      "layer": 2147483630,
+      "id": 36,
       "x": 859
     },
     {
-      "y": 0,
-      "name": "Item-0",
       "owner": "Spotlight",
-      "h": 24,
-      "layer": 25,
+      "y": 0,
+      "id": 21,
+      "name": "Item-0",
       "x": 807,
+      "layer": 25,
       "w": 31,
-      "id": 20
+      "h": 24
     },
     {
-      "y": 0,
+      "x": 838,
+      "id": 11,
+      "owner": "Control Center",
       "w": 34,
       "name": "BentoBox",
-      "layer": 25,
-      "id": 22,
       "h": 24,
-      "owner": "Control Center",
-      "x": 838
+      "y": 0,
+      "layer": 25
     },
     {
-      "y": 0,
-      "layer": 25,
-      "owner": "Control Center",
-      "h": 24,
-      "id": 21,
-      "name": "Clock",
+      "id": 10,
       "x": 872,
-      "w": 152
+      "h": 24,
+      "y": 0,
+      "name": "Clock",
+      "w": 152,
+      "owner": "Control Center",
+      "layer": 25
     },
     {
       "owner": "Window Server",
-      "h": 24,
-      "id": 30,
-      "name": "Menubar",
-      "x": 0,
-      "w": 1024,
       "y": 0,
-      "layer": 24
-    },
-    {
-      "y": 465,
-      "layer": 3,
-      "x": 795,
-      "id": 36,
-      "w": 205,
-      "h": 285,
-      "owner": "osascript",
-      "name": "桌面小伙伴"
-    },
-    {
-      "owner": "osascript",
       "w": 1024,
-      "x": 0,
-      "layer": 0,
+      "name": "Menubar",
+      "h": 24,
+      "layer": 24,
+      "id": 33,
+      "x": 0
+    },
+    {
+      "name": "桌面小伙伴",
+      "owner": "osascript",
+      "h": 285,
+      "x": 795,
+      "id": 37,
+      "y": 465,
+      "w": 205,
+      "layer": 3
+    },
+    {
+      "id": 34,
+      "owner": "osascript",
+      "name": "",
       "y": 0,
       "h": 768,
-      "id": 33,
-      "name": ""
+      "x": 0,
+      "layer": 0,
+      "w": 1024
     }
   ],
   "screens": [

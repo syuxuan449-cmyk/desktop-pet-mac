@@ -26,4 +26,7 @@
 - right_menu: pass
 - drag: pass
 - run_loop: pass
-- quit: pass
+- quit: fail
+
+## failures
+- quit: FAIL gone=False
