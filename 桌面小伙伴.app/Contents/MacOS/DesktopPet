@@ -1,0 +1,12 @@
+#!/bin/bash
+# 桌面小伙伴 macOS 启动器：用系统自带的 osascript (JavaScript for Automation) 运行桌宠
+RES="$(cd "$(dirname "$0")/../Resources" && pwd)"
+LOG_DIR="$HOME/Library/Logs"
+mkdir -p "$LOG_DIR" 2>/dev/null
+LOG="$LOG_DIR/桌面小伙伴.log"
+# 已在运行就不再重复打开
+if /usr/bin/pgrep -f "Resources/DesktopPet.js" >/dev/null 2>&1; then
+  exit 0
+fi
+echo "==== $(date '+%Y-%m-%d %H:%M:%S') 启动 ====" >>"$LOG" 2>/dev/null
+exec /usr/bin/osascript -l JavaScript "$RES/DesktopPet.js" "$RES" >>"$LOG" 2>&1

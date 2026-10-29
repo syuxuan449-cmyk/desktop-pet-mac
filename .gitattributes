@@ -1,0 +1,5 @@
+*.png binary
+*.icns binary
+*.zip binary
+*.command text eol=lf
+桌面小伙伴.app/Contents/MacOS/DesktopPet text eol=lf

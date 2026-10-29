@@ -1,0 +1,87 @@
+# Launch the desktop pet on real macOS and keep screenshots in the branch.
+#
+# GitHub retired the macos-13 image on 2025-12-04. The Intel x86_64 runner that
+# matches a 2019 MacBook Pro on Sequoia is macos-15-intel. macos-15 is the
+# current Sequoia Apple Silicon image (macos-latest has since moved on).
+
+name: macOS pet
+
+on:
+  push:
+    paths-ignore:
+      - 'test-results/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: macos-pet-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exercise:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15-intel
+            label: macos-15-intel
+          - os: macos-15
+            label: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install cliclick
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+          HOMEBREW_NO_INSTALL_CLEANUP: "1"
+        run: brew install cliclick
+
+      - name: Launch and exercise
+        id: exercise
+        env:
+          PET_CI: "1"
+          PET_RUNNER_LABEL: ${{ matrix.label }}
+          LANG: en_US.UTF-8
+          LC_ALL: en_US.UTF-8
+        run: |
+          chmod +x "桌面小伙伴.app/Contents/MacOS/DesktopPet" "启动桌宠（备用）.command" scripts/ci_exercise.py
+          xattr -dr com.apple.quarantine "桌面小伙伴.app" || true
+          caffeinate -dims python3 scripts/ci_exercise.py
+
+      - name: Upload screenshots and logs
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pet-${{ matrix.label }}
+          path: test-results/${{ matrix.label }}/
+          if-no-files-found: warn
+
+      - name: Commit results back to the branch
+        if: ${{ !cancelled() }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A "test-results/${{ matrix.label }}"
+          if git diff --cached --quiet; then
+            echo "No test results to commit"
+            exit 0
+          fi
+          git commit -m "test-results: ${{ matrix.label }}"
+          for i in 1 2 3 4 5 6 7 8; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "push failed, retry $i"
+            sleep $((i * 4))
+          done
+          exit 1
