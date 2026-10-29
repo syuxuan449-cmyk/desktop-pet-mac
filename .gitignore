@@ -2,3 +2,5 @@
 ._*
 *.swp
 qa-output/
+__pycache__/
+*.pyc
