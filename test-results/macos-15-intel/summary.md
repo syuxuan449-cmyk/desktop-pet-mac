@@ -2,43 +2,19 @@
 
 - structure: pass
 - open_launch: pass
-- open_stays_alive: fail
-- direct_launch: fail
-- direct_stays_alive: fail
-- bubble_hides: fail
+- open_stays_alive: pass
+- direct_launch: pass
+- window_found: pass
+- bottom_right: pass
+- transparent: pass
+- pet_visible: pass
+- bubble: pass
+- direct_stays_alive: pass
+- bubble_hides: pass
 - head_click: fail
 - head_returns_idle: fail
-- bottom_spank: fail
-- spank_returns_idle: fail
-- feed: fail
-- feed_returns_idle: fail
-- sleep: fail
-- wake: fail
-- dance: fail
-- dance_ends: fail
-- more_menu: fail
-- toolbar_hide: fail
-- right_menu: fail
-- drag: fail
-- quit: fail
 
 ## failures
-- open_stays_alive: FAIL pids=[]
-- direct_launch: FAIL pids=[] ready=False
-- direct_stays_alive: FAIL never ready
-- bubble_hides: FAIL no window
-- head_click: FAIL no window
-- head_returns_idle: FAIL no window
-- bottom_spank: FAIL no window
-- spank_returns_idle: FAIL no window
-- feed: FAIL no window
-- feed_returns_idle: FAIL no window
-- sleep: FAIL no window
-- wake: FAIL no window
-- dance: FAIL no window
-- dance_ends: FAIL no window
-- more_menu: FAIL no window
-- toolbar_hide: FAIL no window
-- right_menu: FAIL no window
-- drag: FAIL no window
-- quit: FAIL no window
+- head_click: FAIL log
+- head_returns_idle: FAIL state timer
+- exception 'NoneType' object is not subscriptable
