@@ -1,4 +1,4 @@
-==== 2026-10-29 08:31:01 启动 ====
+==== 2026-10-29 08:33:33 启动 ====
 [桌面小伙伴] ARCH x86_64 BOOL c
 [桌面小伙伴] ARCH x86_64 BOOL c
 [桌面小伙伴] ACTION startup
@@ -97,6 +97,8 @@
 [桌面小伙伴] VISUAL idle
 [桌面小伙伴] ACTION idle
 [桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
 [桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
 [桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
 [桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
@@ -137,10 +139,6 @@
 [桌面小伙伴] TIMER start bubble 2200ms repeats=false
 [桌面小伙伴] ACTION right-menu
 [桌面小伙伴] ACTION right-menu
-[桌面小伙伴] ACTION bubble-hide
-[桌面小伙伴] ACTION bubble-hide
-[桌面小伙伴] TIMER start bubble 2600ms repeats=false
-[桌面小伙伴] TIMER start bubble 2600ms repeats=false
 [桌面小伙伴] ACTION bubble-hide
 [桌面小伙伴] ACTION bubble-hide
 [桌面小伙伴] EVENT down clicks=1 x=102.0 y=150.0

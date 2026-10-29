@@ -31,82 +31,72 @@
       "layer": 0
     },
     {
-      "y": 3,
-      "id": 37,
       "name": "StatusIndicator",
-      "h": 18,
       "owner": "Window Server",
-      "w": 10,
+      "id": 37,
+      "layer": 2147483630,
       "x": 1755,
-      "layer": 2147483630
+      "y": 3,
+      "h": 18,
+      "w": 10
     },
     {
-      "x": 1413,
-      "id": 41,
-      "layer": 103,
-      "name": "",
-      "y": 806,
-      "h": 32,
-      "owner": "osascript",
-      "w": 312
-    },
-    {
-      "owner": "Spotlight",
-      "name": "Item-0",
-      "id": 24,
-      "x": 1703,
-      "y": 0,
-      "layer": 25,
       "w": 31,
-      "h": 24
+      "h": 24,
+      "name": "Item-0",
+      "y": 0,
+      "x": 1703,
+      "id": 24,
+      "layer": 25,
+      "owner": "Spotlight"
     },
     {
-      "owner": "Control Center",
-      "name": "BentoBox",
-      "w": 34,
       "layer": 25,
-      "id": 20,
-      "x": 1734,
       "h": 24,
+      "w": 34,
+      "x": 1734,
+      "owner": "Control Center",
+      "id": 16,
+      "name": "BentoBox",
       "y": 0
     },
     {
-      "id": 11,
       "h": 24,
-      "y": 0,
-      "owner": "Control Center",
-      "x": 1768,
-      "name": "Clock",
+      "layer": 25,
       "w": 152,
-      "layer": 25
+      "owner": "Control Center",
+      "id": 11,
+      "name": "Clock",
+      "x": 1768,
+      "y": 0
     },
     {
-      "y": 0,
       "owner": "Window Server",
+      "x": 0,
+      "name": "Menubar",
+      "w": 1920,
       "h": 24,
       "layer": 24,
-      "x": 0,
-      "w": 1920,
-      "id": 26,
-      "name": "Menubar"
+      "y": 0,
+      "id": 26
     },
     {
-      "id": 38,
       "h": 285,
-      "y": 637,
-      "x": 1311,
       "layer": 3,
+      "id": 38,
       "owner": "osascript",
-      "w": 205,
-      "name": "桌面小伙伴"
+      "y": 637,
+      "name": "桌面小伙伴",
+      "x": 1311,
+      "w": 205
     },
     {
+      "name": "",
       "y": 0,
       "owner": "osascript",
-      "w": 1920,
-      "h": 1080,
-      "name": "",
       "id": 31,
+      "h": 1080,
+      "w": 1920,
       "layer": 0,
       "x": 0
     }
@@ -124,5 +114,5 @@
       "scale": 1
     }
   ],
-  "swift_windows": 8
+  "swift_windows": 7
 }

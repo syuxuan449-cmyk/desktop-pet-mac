@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "id": 37,
       "owner": "Window Server",
-      "y": 3,
-      "layer": 2147483630,
-      "name": "StatusIndicator",
       "h": 18,
       "x": 1755,
-      "w": 10
+      "id": 37,
+      "name": "StatusIndicator",
+      "y": 3,
+      "w": 10,
+      "layer": 2147483630
     },
     {
+      "h": 24,
       "layer": 25,
-      "w": 31,
       "y": 0,
       "owner": "Spotlight",
-      "x": 1703,
-      "id": 24,
       "name": "Item-0",
+      "id": 24,
+      "x": 1703,
+      "w": 31
+    },
+    {
+      "y": 0,
+      "layer": 25,
+      "w": 34,
+      "owner": "Control Center",
+      "h": 24,
+      "id": 16,
+      "name": "BentoBox",
+      "x": 1734
+    },
+    {
+      "y": 0,
+      "x": 1768,
+      "owner": "Control Center",
+      "id": 11,
+      "layer": 25,
+      "h": 24,
+      "w": 152,
+      "name": "Clock"
+    },
+    {
+      "layer": 24,
+      "owner": "Window Server",
+      "id": 26,
+      "y": 0,
+      "w": 1920,
+      "x": 0,
+      "name": "Menubar",
       "h": 24
     },
     {
-      "id": 20,
-      "x": 1734,
-      "y": 0,
-      "layer": 25,
-      "h": 24,
-      "name": "BentoBox",
-      "w": 34,
-      "owner": "Control Center"
-    },
-    {
-      "layer": 25,
-      "x": 1768,
-      "h": 24,
-      "owner": "Control Center",
-      "name": "Clock",
-      "w": 152,
-      "id": 11,
-      "y": 0
+      "owner": "osascript",
+      "w": 205,
+      "id": 38,
+      "y": 777,
+      "name": "桌面小伙伴",
+      "x": 1691,
+      "layer": 3,
+      "h": 285
     },
     {
       "w": 1920,
-      "id": 26,
       "y": 0,
-      "h": 24,
-      "layer": 24,
-      "name": "Menubar",
-      "owner": "Window Server",
-      "x": 0
-    },
-    {
-      "w": 205,
-      "id": 38,
-      "owner": "osascript",
-      "y": 777,
-      "h": 285,
-      "name": "桌面小伙伴",
-      "x": 1691,
-      "layer": 3
-    },
-    {
-      "name": "",
       "owner": "osascript",
       "id": 31,
       "x": 0,
+      "name": "",
       "h": 1080,
-      "layer": 0,
-      "y": 0,
-      "w": 1920
+      "layer": 0
     }
   ],
   "screens": [
