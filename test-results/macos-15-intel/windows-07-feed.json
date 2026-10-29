@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "h": 18,
       "layer": 2147483630,
-      "y": 3,
-      "x": 1755,
       "w": 10,
+      "h": 18,
+      "y": 3,
       "id": 37,
-      "owner": "Window Server",
-      "name": "StatusIndicator"
-    },
-    {
-      "x": 1703,
-      "y": 0,
-      "layer": 25,
-      "w": 31,
-      "name": "Item-0",
-      "owner": "Spotlight",
-      "id": 24,
-      "h": 24
-    },
-    {
-      "name": "BentoBox",
-      "w": 34,
-      "y": 0,
-      "owner": "Control Center",
-      "layer": 25,
-      "id": 21,
-      "h": 24,
-      "x": 1734
-    },
-    {
-      "w": 152,
-      "owner": "Control Center",
-      "layer": 25,
-      "name": "Clock",
-      "x": 1768,
-      "y": 0,
-      "h": 24,
-      "id": 12
-    },
-    {
-      "h": 24,
-      "y": 0,
-      "w": 1920,
-      "name": "Menubar",
-      "id": 26,
-      "x": 0,
-      "layer": 24,
+      "x": 1755,
+      "name": "StatusIndicator",
       "owner": "Window Server"
     },
     {
-      "owner": "osascript",
-      "id": 38,
-      "w": 205,
-      "h": 285,
-      "layer": 3,
-      "name": "桌面小伙伴",
-      "y": 777,
-      "x": 1691
+      "name": "Item-0",
+      "x": 1703,
+      "h": 24,
+      "layer": 25,
+      "y": 0,
+      "w": 31,
+      "id": 24,
+      "owner": "Spotlight"
     },
     {
-      "layer": 0,
-      "name": "",
-      "owner": "osascript",
-      "w": 1920,
-      "id": 36,
-      "h": 1080,
+      "x": 1734,
+      "h": 24,
+      "layer": 25,
       "y": 0,
-      "x": 0
+      "name": "BentoBox",
+      "owner": "Control Center",
+      "id": 20,
+      "w": 34
+    },
+    {
+      "name": "Clock",
+      "h": 24,
+      "owner": "Control Center",
+      "id": 11,
+      "w": 152,
+      "x": 1768,
+      "layer": 25,
+      "y": 0
+    },
+    {
+      "id": 26,
+      "x": 0,
+      "layer": 24,
+      "owner": "Window Server",
+      "name": "Menubar",
+      "h": 24,
+      "w": 1920,
+      "y": 0
+    },
+    {
+      "x": 1691,
+      "name": "桌面小伙伴",
+      "h": 285,
+      "y": 777,
+      "layer": 3,
+      "id": 38,
+      "w": 205,
+      "owner": "osascript"
+    },
+    {
+      "id": 31,
+      "name": "",
+      "y": 0,
+      "w": 1920,
+      "layer": 0,
+      "owner": "osascript",
+      "x": 0,
+      "h": 1080
     }
   ],
   "screens": [

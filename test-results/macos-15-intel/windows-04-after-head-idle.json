@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "id": 37,
-      "owner": "Window Server",
-      "name": "StatusIndicator",
-      "y": 3,
-      "w": 10,
       "h": 18,
       "layer": 2147483630,
-      "x": 1755
+      "id": 37,
+      "name": "StatusIndicator",
+      "x": 1755,
+      "owner": "Window Server",
+      "w": 10,
+      "y": 3
     },
     {
-      "w": 31,
+      "y": 0,
+      "layer": 25,
+      "owner": "Spotlight",
       "h": 24,
       "id": 24,
       "name": "Item-0",
-      "owner": "Spotlight",
-      "x": 1703,
-      "y": 0,
-      "layer": 25
+      "w": 31,
+      "x": 1703
     },
     {
-      "owner": "Control Center",
-      "y": 0,
-      "layer": 25,
-      "name": "BentoBox",
+      "id": 20,
       "x": 1734,
-      "w": 34,
-      "h": 24,
-      "id": 21
-    },
-    {
-      "name": "Clock",
+      "name": "BentoBox",
       "layer": 25,
       "y": 0,
       "h": 24,
-      "x": 1768,
-      "id": 12,
       "owner": "Control Center",
-      "w": 152
+      "w": 34
     },
     {
-      "name": "Menubar",
-      "id": 26,
-      "owner": "Window Server",
-      "x": 0,
-      "y": 0,
-      "w": 1920,
       "h": 24,
-      "layer": 24
+      "layer": 25,
+      "id": 11,
+      "name": "Clock",
+      "x": 1768,
+      "y": 0,
+      "w": 152,
+      "owner": "Control Center"
+    },
+    {
+      "h": 24,
+      "w": 1920,
+      "name": "Menubar",
+      "x": 0,
+      "owner": "Window Server",
+      "id": 26,
+      "layer": 24,
+      "y": 0
     },
     {
       "owner": "osascript",
-      "layer": 3,
-      "w": 205,
       "y": 777,
+      "w": 205,
       "h": 285,
-      "name": "桌面小伙伴",
       "x": 1691,
+      "layer": 3,
+      "name": "桌面小伙伴",
       "id": 38
     },
     {
-      "id": 36,
+      "layer": 0,
+      "id": 31,
+      "h": 1080,
+      "owner": "osascript",
       "x": 0,
       "w": 1920,
       "y": 0,
-      "layer": 0,
-      "h": 1080,
-      "name": "",
-      "owner": "osascript"
+      "name": ""
     }
   ],
   "screens": [

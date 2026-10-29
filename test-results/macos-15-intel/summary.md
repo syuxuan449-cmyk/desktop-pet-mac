@@ -23,6 +23,7 @@
 - dance_ends: pass
 - more_menu: pass
 - toolbar_hide: pass
-
-## failures
-- exception pet window is gone
+- right_menu: pass
+- drag: pass
+- run_loop: pass
+- quit: pass
