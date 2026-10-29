@@ -31,82 +31,82 @@
       "layer": 0
     },
     {
-      "id": 37,
-      "h": 18,
-      "y": 3,
-      "layer": 2147483630,
-      "x": 1755,
       "w": 10,
+      "id": 38,
       "owner": "Window Server",
-      "name": "StatusIndicator"
+      "y": 3,
+      "x": 1755,
+      "h": 18,
+      "name": "StatusIndicator",
+      "layer": 2147483630
     },
     {
-      "h": 164,
-      "x": 1778,
       "layer": 101,
+      "x": 1778,
       "y": 857,
-      "w": 136,
-      "owner": "osascript",
+      "id": 40,
       "name": "",
-      "id": 39
+      "owner": "osascript",
+      "w": 136,
+      "h": 164
     },
     {
-      "y": 0,
       "owner": "Spotlight",
-      "id": 24,
-      "name": "Item-0",
       "w": 31,
+      "y": 0,
+      "name": "Item-0",
+      "id": 24,
       "layer": 25,
       "x": 1703,
       "h": 24
     },
     {
+      "id": 14,
+      "name": "BentoBox",
       "x": 1734,
-      "layer": 25,
+      "h": 24,
       "y": 0,
       "w": 34,
-      "id": 16,
-      "name": "BentoBox",
-      "h": 24,
+      "layer": 25,
       "owner": "Control Center"
     },
     {
-      "owner": "Control Center",
+      "name": "Clock",
+      "y": 0,
       "w": 152,
+      "x": 1768,
       "layer": 25,
       "id": 11,
-      "h": 24,
-      "y": 0,
-      "x": 1768,
-      "name": "Clock"
+      "owner": "Control Center",
+      "h": 24
     },
     {
-      "h": 24,
-      "layer": 24,
-      "name": "Menubar",
       "x": 0,
+      "w": 1920,
+      "h": 24,
+      "id": 27,
       "y": 0,
       "owner": "Window Server",
-      "id": 26,
-      "w": 1920
+      "name": "Menubar",
+      "layer": 24
     },
     {
-      "h": 285,
-      "name": "桌面小伙伴",
-      "y": 777,
-      "id": 38,
-      "w": 205,
-      "owner": "osascript",
       "x": 1691,
-      "layer": 3
+      "owner": "osascript",
+      "y": 777,
+      "name": "桌面小伙伴",
+      "id": 39,
+      "layer": 3,
+      "w": 205,
+      "h": 285
     },
     {
+      "id": 32,
       "owner": "osascript",
-      "name": "",
-      "x": 0,
       "y": 0,
       "h": 1080,
-      "id": 31,
+      "name": "",
+      "x": 0,
       "w": 1920,
       "layer": 0
     }
