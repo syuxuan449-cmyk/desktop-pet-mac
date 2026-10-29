@@ -12,7 +12,7 @@
 - direct_stays_alive: pass
 - bubble_hides: pass
 - head_click: pass
-- head_returns_idle: fail
+- head_returns_idle: pass
 - bottom_spank: pass
 - spank_returns_idle: pass
 - feed: pass
@@ -22,12 +22,7 @@
 - dance: pass
 - dance_ends: pass
 - more_menu: pass
-- toolbar_hide: fail
-- right_menu: pass
-- drag: pass
-- run_loop: pass
-- quit: pass
+- toolbar_hide: pass
 
 ## failures
-- head_returns_idle: FAIL state timer
-- toolbar_hide: FAIL esc
+- exception pet window is gone

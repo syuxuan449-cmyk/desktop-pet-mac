@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "owner": "Window Server",
-      "w": 10,
-      "layer": 2147483630,
-      "name": "StatusIndicator",
-      "id": 39,
-      "x": 1755,
+      "id": 37,
       "y": 3,
-      "h": 18
+      "owner": "Window Server",
+      "name": "StatusIndicator",
+      "h": 18,
+      "layer": 2147483630,
+      "w": 10,
+      "x": 1755
     },
     {
-      "owner": "Spotlight",
-      "id": 24,
+      "h": 24,
+      "x": 1703,
       "y": 0,
+      "id": 24,
       "name": "Item-0",
       "w": 31,
-      "h": 24,
       "layer": 25,
-      "x": 1703
+      "owner": "Spotlight"
     },
     {
-      "w": 34,
-      "layer": 25,
-      "id": 16,
-      "name": "BentoBox",
-      "y": 0,
+      "id": 21,
       "x": 1734,
+      "w": 34,
+      "owner": "Control Center",
+      "name": "BentoBox",
       "h": 24,
+      "y": 0,
+      "layer": 25
+    },
+    {
+      "x": 1768,
+      "layer": 25,
+      "w": 152,
+      "h": 24,
+      "id": 12,
+      "name": "Clock",
+      "y": 0,
       "owner": "Control Center"
     },
     {
-      "name": "Clock",
-      "y": 0,
-      "owner": "Control Center",
       "h": 24,
-      "layer": 25,
-      "id": 11,
-      "x": 1768,
-      "w": 152
-    },
-    {
-      "w": 1920,
       "y": 0,
-      "id": 32,
-      "name": "Menubar",
-      "owner": "Window Server",
-      "h": 24,
       "layer": 24,
-      "x": 0
+      "owner": "Window Server",
+      "name": "Menubar",
+      "x": 0,
+      "w": 1920,
+      "id": 26
     },
     {
+      "id": 38,
       "owner": "osascript",
-      "layer": 3,
-      "id": 40,
-      "x": 1691,
-      "h": 285,
       "y": 777,
       "name": "桌面小伙伴",
-      "w": 205
+      "w": 205,
+      "h": 285,
+      "x": 1691,
+      "layer": 3
     },
     {
-      "y": 0,
-      "x": 0,
-      "h": 1080,
-      "layer": 0,
-      "id": 37,
-      "w": 1920,
+      "name": "",
       "owner": "osascript",
-      "name": ""
+      "w": 1920,
+      "x": 0,
+      "layer": 0,
+      "id": 36,
+      "y": 0,
+      "h": 1080
     }
   ],
   "screens": [
