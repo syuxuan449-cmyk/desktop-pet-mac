@@ -557,7 +557,14 @@ function activatePet() {
 }
 
 // ---------- 鼠标 ----------
-function localPoint(ev) { return UI.view.convertPointFromView(ev.locationInWindow, null); }
+function localPoint(ev) {
+  // convertPoint:fromView:nil crashes under JXA: null becomes kCFNull and
+  // -[NSView ancestorSharedWithView:] segfaults. Window coords are bottom-left;
+  // DPPetView is flipped, so flip y ourselves.
+  var p = ev.locationInWindow;
+  var h = Number(UI.view.bounds.size.height) || WIN_H;
+  return { x: Number(p.x), y: h - Number(p.y) };
+}
 function inRect(p, r) { return p.x >= r.x && p.x <= r.x + r.w && p.y >= r.y && p.y <= r.y + r.h; }
 function viewRect(v) { var f = v.frame; return { x: f.origin.x, y: f.origin.y, w: f.size.width, h: f.size.height }; }
 

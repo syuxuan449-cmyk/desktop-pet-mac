@@ -387,6 +387,8 @@ def jxa_input(kind, coords):
 
 
 def screen_point(win, rel):
+    if not win:
+        raise RuntimeError("pet window is gone")
     return (win["x"] + rel[0], win["y"] + rel[1])
 
 
