@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "owner": "Window Server",
-      "id": 37,
-      "name": "StatusIndicator",
       "layer": 2147483630,
       "x": 1755,
+      "id": 39,
+      "name": "StatusIndicator",
+      "h": 18,
+      "owner": "Window Server",
       "y": 3,
-      "w": 10,
-      "h": 18
+      "w": 10
     },
     {
+      "h": 24,
       "x": 1703,
+      "layer": 25,
+      "y": 0,
       "owner": "Spotlight",
       "w": 31,
-      "y": 0,
-      "h": 24,
       "id": 24,
-      "name": "Item-0",
-      "layer": 25
+      "name": "Item-0"
     },
     {
-      "x": 1734,
-      "id": 16,
       "y": 0,
+      "name": "BentoBox",
+      "layer": 25,
       "w": 34,
       "owner": "Control Center",
       "h": 24,
-      "layer": 25,
-      "name": "BentoBox"
+      "x": 1734,
+      "id": 16
     },
     {
-      "owner": "Control Center",
-      "y": 0,
       "layer": 25,
-      "w": 152,
       "x": 1768,
-      "id": 11,
+      "y": 0,
       "name": "Clock",
+      "owner": "Control Center",
+      "id": 11,
+      "w": 152,
       "h": 24
     },
     {
-      "w": 1920,
-      "owner": "Window Server",
       "h": 24,
+      "owner": "Window Server",
       "x": 0,
-      "y": 0,
-      "id": 26,
-      "name": "Menubar",
-      "layer": 24
-    },
-    {
-      "x": 1691,
-      "id": 38,
-      "y": 777,
-      "layer": 3,
-      "h": 285,
-      "w": 205,
-      "owner": "osascript",
-      "name": "桌面小伙伴"
-    },
-    {
-      "owner": "osascript",
-      "name": "",
+      "layer": 24,
       "w": 1920,
-      "layer": 0,
-      "x": 0,
       "y": 0,
-      "id": 31,
-      "h": 1080
+      "name": "Menubar",
+      "id": 32
+    },
+    {
+      "id": 40,
+      "y": 777,
+      "name": "桌面小伙伴",
+      "x": 1691,
+      "w": 205,
+      "h": 285,
+      "layer": 3,
+      "owner": "osascript"
+    },
+    {
+      "id": 37,
+      "w": 1920,
+      "y": 0,
+      "h": 1080,
+      "layer": 0,
+      "name": "",
+      "x": 0,
+      "owner": "osascript"
     }
   ],
   "screens": [
