@@ -338,6 +338,13 @@ def deliver(kind, coords, marker, settle=0.55):
         arrived = ("EVENT " in delta) or ("ACTION " in delta)
         wanted = (marker in delta) if marker else arrived
         S.note("input %s via %s arrived=%s wanted=%s" % (kind, driver, arrived, wanted))
+        # Double-click must actually start the dance. A plain click is not enough,
+        # so fall through to the JXA helper which sets clickCount 2.
+        if kind == "dclick":
+            if wanted or driver == drivers[-1]:
+                S.driver = driver
+                return wanted, delta, driver
+            continue
         # A different action means the event landed; don't fire a second driver.
         if wanted or arrived or driver == drivers[-1]:
             S.driver = driver

@@ -305,19 +305,27 @@ function updateAffection(amount) {
 
 // ---------- 爱心 / 怒气特效 ----------
 function textLayer(text, size, weight, color) {
-  // Plain CATextLayer string: the JXA bridge on Sequoia does not export
-  // NSAttributedString initializers, and hearts only need a colored glyph.
-  var tl = $.CATextLayer.layer;
-  tl.setString(String(text));
-  tl.setFontSize(size);
-  tl.setAlignmentMode('center');
-  tl.setContentsScale(UI.scale || 2);
+  // Draw the glyph into an NSImage. CATextLayer.setForegroundColor: crashes on
+  // Sequoia JXA because NSColor.CGColor is a dangling CF object (CFEqual fault).
+  var w = Math.ceil(size * (String(text).length > 1 ? 1.8 : 1.6));
+  var h = Math.ceil(size * 1.5);
+  var img = $.NSImage.alloc.initWithSize($.NSMakeSize(w, h));
+  img.lockFocus();
   try {
-    var name = String(font(size, weight).fontName || '');
-    tl.setFont(name && name.charAt(0) !== '.' ? name : 'PingFangSC-Regular');
-  } catch (e) {}
-  try { tl.setForegroundColor(color.CGColor); } catch (e) {}
-  return tl;
+    var ns = $.NSString.stringWithString(String(text));
+    var dict = $.NSDictionary.dictionaryWithObjectsForKeys(
+      $([font(size, weight), color]), $(['NSFont', 'NSColor']));
+    if (ns.drawAtPointWithAttributes) ns.drawAtPointWithAttributes($.NSMakePoint(0, 2), dict);
+    else ns.drawInRectWithAttributes($.NSMakeRect(0, 0, w, h), dict);
+  } catch (e) { log('glyph ' + e); }
+  img.unlockFocus();
+  if (!S.glyphHold) S.glyphHold = [];
+  S.glyphHold.push(img);
+  var layer = $.CALayer.layer;
+  layer.setContents(img);
+  layer.setContentsScale(UI.scale || 1);
+  layer.setContentsGravity('resizeAspect');
+  return layer;
 }
 
 function addFloatingHearts(count) {
