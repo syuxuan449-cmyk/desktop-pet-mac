@@ -704,6 +704,12 @@ def exercise(win):
     S.mark("toolbar_hide", hidden, "esc")
 
     win, _ = fresh_window()
+    if not win:
+        S.mark("right_menu", "ACTION right-menu" in read_log(), "window gone after esc")
+        S.mark("drag", False, "no window")
+        S.mark("run_loop", bool(pet_pids()), "after esc")
+        S.mark("quit", False, "window gone")
+        return
     before_ids = {w["id"] for w in (query_windows().get("windows") or [])}
     deliver("rclick", screen_point(win, (102, 150)), "ACTION right-menu", settle=0.7)
     data = query_windows()

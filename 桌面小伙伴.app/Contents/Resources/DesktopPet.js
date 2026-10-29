@@ -926,22 +926,6 @@ function buildUI() {
   menu.addItem($.NSMenuItem.separatorItem);
   item('退出桌宠', 'quitPet:');
   UI.menu = menu;
-  // Esc during menu tracking never reaches keyDown:. A local monitor still sees it.
-  try {
-    var keyMask = $.NSEventMaskKeyDown || 1024;
-    $.NSEvent.addLocalMonitorForEventsMatchingMaskHandler(keyMask, function (ev) {
-      try {
-        if (Number(ev.keyCode) === 53 && !S.escLogged) {
-          S.escLogged = true;
-          try { UI.menu.cancelTracking; } catch (e) {}
-          setToolbarVisible(false);
-          log('ACTION toolbar-hide');
-          showSpeech('工具栏已隐藏，右键可再次打开菜单。', 2200);
-        }
-      } catch (e2) { log('esc ' + e2); }
-      return ev;
-    });
-  } catch (e) { log('key monitor ' + e); }
   log('UI built');
 }
 
