@@ -31,64 +31,74 @@
       "layer": 0
     },
     {
-      "owner": "Spotlight",
-      "name": "Item-0",
-      "h": 24,
+      "y": 0,
+      "w": 31,
       "x": 807,
-      "id": 17,
-      "layer": 25,
-      "y": 0,
-      "w": 31
-    },
-    {
-      "y": 0,
-      "owner": "Control Center",
-      "id": 22,
-      "x": 838,
-      "layer": 25,
-      "w": 34,
-      "name": "BentoBox",
-      "h": 24
-    },
-    {
-      "name": "Clock",
-      "owner": "Control Center",
       "layer": 25,
       "h": 24,
-      "x": 872,
+      "id": 19,
+      "name": "Item-0",
+      "owner": "Spotlight"
+    },
+    {
+      "y": 0,
+      "h": 24,
+      "x": 838,
+      "w": 34,
+      "layer": 25,
+      "name": "BentoBox",
+      "id": 22,
+      "owner": "Control Center"
+    },
+    {
+      "owner": "Control Center",
+      "name": "Clock",
       "id": 21,
       "w": 152,
-      "y": 0
-    },
-    {
-      "x": 0,
-      "h": 24,
-      "w": 1024,
-      "owner": "Window Server",
+      "layer": 25,
       "y": 0,
-      "id": 33,
+      "h": 24,
+      "x": 872
+    },
+    {
+      "h": 24,
+      "y": 0,
+      "id": 32,
+      "owner": "Window Server",
       "name": "Menubar",
-      "layer": 24
+      "w": 1024,
+      "layer": 24,
+      "x": 0
     },
     {
-      "name": "桌面小伙伴",
-      "h": 285,
+      "h": 768,
+      "owner": "Dock",
+      "y": 0,
+      "layer": 20,
+      "name": "Dock",
+      "id": 30,
+      "x": 0,
+      "w": 1024
+    },
+    {
+      "y": 403,
+      "id": 34,
       "layer": 3,
-      "id": 35,
+      "h": 285,
       "owner": "桌面小伙伴",
+      "x": 795,
       "w": 205,
-      "y": 465,
-      "x": 795
+      "name": "桌面小伙伴"
     },
     {
+      "name": "",
       "owner": "osascript",
+      "y": 0,
       "h": 768,
       "layer": 0,
-      "y": 0,
+      "id": 33,
       "w": 1024,
-      "id": 34,
-      "x": 0,
-      "name": ""
+      "x": 0
     }
   ],
   "screens": [
@@ -98,11 +108,11 @@
       "w": 1024,
       "h": 768,
       "vx": 0,
-      "vy": 0,
+      "vy": 62,
       "vw": 1024,
-      "vh": 743,
+      "vh": 681,
       "scale": 1
     }
   ],
-  "swift_windows": 6
+  "swift_windows": 7
 }

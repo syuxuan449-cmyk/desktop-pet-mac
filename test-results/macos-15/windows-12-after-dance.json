@@ -31,74 +31,84 @@
       "layer": 0
     },
     {
-      "y": 3,
-      "id": 36,
-      "h": 18,
-      "name": "StatusIndicator",
-      "x": 859,
       "layer": 2147483630,
+      "name": "StatusIndicator",
+      "w": 10,
+      "h": 18,
       "owner": "Window Server",
-      "w": 10
+      "x": 859,
+      "id": 35,
+      "y": 3
     },
     {
       "w": 31,
-      "id": 17,
-      "y": 0,
       "h": 24,
+      "y": 0,
+      "x": 807,
       "layer": 25,
-      "owner": "Spotlight",
       "name": "Item-0",
-      "x": 807
+      "id": 19,
+      "owner": "Spotlight"
     },
     {
-      "layer": 25,
-      "id": 22,
-      "w": 34,
       "name": "BentoBox",
+      "id": 22,
       "owner": "Control Center",
-      "x": 838,
+      "y": 0,
+      "w": 34,
       "h": 24,
+      "layer": 25,
+      "x": 838
+    },
+    {
+      "owner": "Control Center",
+      "y": 0,
+      "name": "Clock",
+      "w": 152,
+      "h": 24,
+      "layer": 25,
+      "x": 872,
+      "id": 21
+    },
+    {
+      "h": 24,
+      "w": 1024,
+      "name": "Menubar",
+      "layer": 24,
+      "id": 32,
+      "owner": "Window Server",
+      "x": 0,
       "y": 0
     },
     {
-      "id": 21,
-      "name": "Clock",
-      "y": 0,
-      "layer": 25,
-      "h": 24,
-      "owner": "Control Center",
-      "x": 872,
-      "w": 152
-    },
-    {
-      "x": 0,
-      "id": 33,
-      "owner": "Window Server",
       "w": 1024,
+      "x": 0,
+      "name": "Dock",
+      "id": 30,
+      "h": 768,
+      "owner": "Dock",
       "y": 0,
-      "name": "Menubar",
-      "layer": 24,
-      "h": 24
+      "layer": 20
     },
     {
+      "id": 36,
       "owner": "osascript",
+      "h": 285,
+      "layer": 3,
       "w": 205,
       "name": "桌面小伙伴",
-      "id": 37,
       "x": 795,
-      "h": 285,
-      "y": 465,
-      "layer": 3
+      "y": 403
     },
     {
+      "id": 33,
       "owner": "osascript",
-      "h": 768,
       "layer": 0,
-      "id": 34,
-      "x": 0,
-      "name": "",
       "y": 0,
-      "w": 1024
+      "name": "",
+      "w": 1024,
+      "h": 768,
+      "x": 0
     }
   ],
   "screens": [
@@ -108,11 +118,11 @@
       "w": 1024,
       "h": 768,
       "vx": 0,
-      "vy": 0,
+      "vy": 62,
       "vw": 1024,
-      "vh": 743,
+      "vh": 681,
       "scale": 1
     }
   ],
-  "swift_windows": 7
+  "swift_windows": 8
 }

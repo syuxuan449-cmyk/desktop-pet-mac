@@ -31,84 +31,84 @@
       "layer": 0
     },
     {
-      "layer": 2147483630,
-      "y": 3,
       "h": 18,
-      "owner": "Window Server",
-      "id": 36,
-      "w": 10,
+      "layer": 2147483630,
       "name": "StatusIndicator",
+      "id": 35,
+      "y": 3,
+      "owner": "Window Server",
+      "w": 10,
       "x": 859
     },
     {
-      "name": "",
-      "x": 761,
-      "id": 39,
-      "y": 598,
       "h": 164,
+      "id": 38,
       "owner": "osascript",
+      "name": "",
       "w": 136,
-      "layer": 101
+      "layer": 101,
+      "y": 547,
+      "x": 761
     },
     {
+      "name": "Item-0",
       "w": 31,
+      "id": 19,
+      "y": 0,
+      "h": 24,
+      "layer": 25,
+      "owner": "Spotlight",
+      "x": 807
+    },
+    {
+      "y": 0,
+      "layer": 25,
+      "x": 838,
+      "w": 34,
+      "name": "BentoBox",
+      "id": 22,
+      "h": 24,
+      "owner": "Control Center"
+    },
+    {
+      "y": 0,
+      "owner": "Control Center",
+      "x": 872,
+      "id": 21,
       "layer": 25,
       "h": 24,
-      "id": 17,
-      "x": 807,
-      "owner": "Spotlight",
-      "name": "Item-0",
+      "name": "Clock",
+      "w": 152
+    },
+    {
+      "id": 32,
+      "owner": "Window Server",
+      "name": "Menubar",
+      "layer": 24,
+      "w": 1024,
+      "h": 24,
+      "x": 0,
       "y": 0
     },
     {
-      "layer": 25,
-      "name": "BentoBox",
-      "y": 0,
-      "w": 34,
-      "x": 838,
-      "id": 22,
-      "owner": "Control Center",
-      "h": 24
-    },
-    {
-      "owner": "Control Center",
-      "h": 24,
-      "id": 21,
-      "name": "Clock",
-      "y": 0,
-      "layer": 25,
-      "w": 152,
-      "x": 872
-    },
-    {
-      "layer": 24,
-      "id": 33,
-      "name": "Menubar",
-      "x": 0,
-      "w": 1024,
-      "y": 0,
-      "h": 24,
-      "owner": "Window Server"
-    },
-    {
-      "name": "桌面小伙伴",
-      "id": 37,
-      "owner": "osascript",
-      "y": 465,
+      "x": 795,
+      "id": 36,
       "h": 285,
       "layer": 3,
-      "x": 795,
+      "owner": "osascript",
+      "name": "桌面小伙伴",
+      "y": 403,
       "w": 205
     },
     {
-      "y": 0,
-      "x": 0,
-      "owner": "osascript",
+      "id": 33,
       "h": 768,
-      "id": 34,
+      "owner": "osascript",
+      "y": 0,
+      "w": 1024,
+      "x": 0,
       "layer": 0,
-      "name": "",
-      "w": 1024
+      "name": ""
     }
   ],
   "screens": [

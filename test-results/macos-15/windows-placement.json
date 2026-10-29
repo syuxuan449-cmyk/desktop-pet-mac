@@ -31,73 +31,83 @@
       "layer": 0
     },
     {
+      "w": 10,
+      "x": 859,
+      "name": "StatusIndicator",
+      "owner": "Window Server",
+      "id": 35,
       "y": 3,
       "layer": 2147483630,
-      "x": 859,
-      "id": 36,
-      "owner": "Window Server",
-      "name": "StatusIndicator",
-      "w": 10,
       "h": 18
     },
     {
+      "h": 24,
       "name": "Item-0",
-      "x": 807,
-      "h": 24,
+      "id": 19,
       "layer": 25,
+      "y": 0,
       "owner": "Spotlight",
-      "id": 17,
-      "y": 0,
-      "w": 31
+      "w": 31,
+      "x": 807
     },
     {
-      "h": 24,
-      "layer": 25,
-      "name": "BentoBox",
       "x": 838,
-      "w": 34,
-      "id": 22,
       "y": 0,
-      "owner": "Control Center"
-    },
-    {
-      "name": "Clock",
-      "id": 21,
-      "w": 152,
+      "name": "BentoBox",
       "owner": "Control Center",
-      "x": 872,
-      "y": 0,
+      "w": 34,
       "h": 24,
+      "id": 22,
       "layer": 25
     },
     {
-      "x": 0,
+      "x": 872,
+      "owner": "Control Center",
+      "id": 21,
       "y": 0,
-      "id": 33,
-      "h": 24,
+      "layer": 25,
+      "w": 152,
+      "name": "Clock",
+      "h": 24
+    },
+    {
+      "y": 0,
+      "x": 0,
+      "name": "Menubar",
       "owner": "Window Server",
       "w": 1024,
-      "name": "Menubar",
+      "h": 24,
+      "id": 32,
       "layer": 24
     },
     {
-      "owner": "osascript",
-      "w": 205,
-      "h": 285,
-      "id": 37,
+      "h": 768,
+      "owner": "Dock",
+      "layer": 20,
+      "x": 0,
+      "name": "Dock",
+      "id": 30,
+      "y": 0,
+      "w": 1024
+    },
+    {
       "x": 795,
-      "y": 465,
+      "y": 403,
+      "h": 285,
       "name": "桌面小伙伴",
-      "layer": 3
+      "layer": 3,
+      "w": 205,
+      "id": 36,
+      "owner": "osascript"
     },
     {
       "h": 768,
-      "owner": "osascript",
       "name": "",
       "w": 1024,
+      "owner": "osascript",
       "layer": 0,
       "x": 0,
-      "id": 34,
+      "id": 33,
       "y": 0
     }
   ],
@@ -108,11 +118,11 @@
       "w": 1024,
       "h": 768,
       "vx": 0,
-      "vy": 0,
+      "vy": 62,
       "vw": 1024,
-      "vh": 743,
+      "vh": 681,
       "scale": 1
     }
   ],
-  "swift_windows": 7
+  "swift_windows": 8
 }

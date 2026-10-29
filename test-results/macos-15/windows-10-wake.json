@@ -31,74 +31,84 @@
       "layer": 0
     },
     {
-      "w": 10,
-      "name": "StatusIndicator",
-      "owner": "Window Server",
-      "x": 859,
-      "y": 3,
-      "id": 36,
       "h": 18,
-      "layer": 2147483630
+      "x": 859,
+      "layer": 2147483630,
+      "y": 3,
+      "id": 35,
+      "name": "StatusIndicator",
+      "w": 10,
+      "owner": "Window Server"
     },
     {
+      "y": 0,
       "name": "Item-0",
-      "x": 807,
-      "w": 31,
-      "id": 17,
-      "y": 0,
-      "layer": 25,
       "owner": "Spotlight",
+      "w": 31,
+      "id": 19,
+      "x": 807,
+      "layer": 25,
       "h": 24
     },
     {
+      "owner": "Control Center",
       "name": "BentoBox",
-      "id": 22,
-      "layer": 25,
-      "x": 838,
-      "y": 0,
       "w": 34,
-      "owner": "Control Center",
-      "h": 24
+      "h": 24,
+      "x": 838,
+      "layer": 25,
+      "y": 0,
+      "id": 22
     },
     {
-      "owner": "Control Center",
-      "layer": 25,
-      "x": 872,
       "w": 152,
-      "y": 0,
       "h": 24,
+      "y": 0,
       "name": "Clock",
+      "owner": "Control Center",
+      "x": 872,
+      "layer": 25,
       "id": 21
     },
     {
       "x": 0,
       "y": 0,
       "h": 24,
-      "id": 33,
-      "name": "Menubar",
       "w": 1024,
       "owner": "Window Server",
+      "name": "Menubar",
+      "id": 32,
       "layer": 24
     },
     {
-      "x": 795,
-      "w": 205,
-      "owner": "osascript",
-      "y": 465,
-      "id": 37,
-      "name": "桌面小伙伴",
-      "layer": 3,
-      "h": 285
+      "layer": 20,
+      "id": 30,
+      "name": "Dock",
+      "h": 768,
+      "w": 1024,
+      "x": 0,
+      "y": 0,
+      "owner": "Dock"
     },
     {
-      "y": 0,
-      "id": 34,
-      "x": 0,
-      "name": "",
-      "w": 1024,
-      "layer": 0,
+      "layer": 3,
+      "name": "桌面小伙伴",
       "owner": "osascript",
-      "h": 768
+      "w": 205,
+      "y": 403,
+      "h": 285,
+      "x": 795,
+      "id": 36
+    },
+    {
+      "x": 0,
+      "h": 768,
+      "owner": "osascript",
+      "y": 0,
+      "layer": 0,
+      "name": "",
+      "id": 33,
+      "w": 1024
     }
   ],
   "screens": [
@@ -108,11 +118,11 @@
       "w": 1024,
       "h": 768,
       "vx": 0,
-      "vy": 0,
+      "vy": 62,
       "vw": 1024,
-      "vh": 743,
+      "vh": 681,
       "scale": 1
     }
   ],
-  "swift_windows": 7
+  "swift_windows": 8
 }
