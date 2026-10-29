@@ -3,7 +3,7 @@
   "features": {
     "structure": "pass",
     "open_launch": "pass",
-    "open_stays_alive": "fail",
+    "open_stays_alive": "pass",
     "direct_launch": "fail",
     "direct_stays_alive": "fail",
     "bubble_hides": "fail",
@@ -24,7 +24,6 @@
     "quit": "fail"
   },
   "failures": [
-    "open_stays_alive: FAIL pids=[]",
     "direct_launch: FAIL pids=[] ready=False",
     "direct_stays_alive: FAIL never ready",
     "bubble_hides: FAIL no window",
@@ -47,10 +46,11 @@
   "notes": [
     "structure: pass plutil=0 exec=True assets=True",
     "wallpaper rc=0 ",
-    "backdrop pid=4281",
+    "backdrop pid=1990",
     "open rc=0 ",
-    "open_launch: pass pids=[4405]",
-    "open_stays_alive: FAIL pids=[]",
+    "open_launch: pass pids=[1999]",
+    "open_stays_alive: pass pids=[1999]",
+    "capture 00-open-idle: pet window not found",
     "direct_launch: FAIL pids=[] ready=False",
     "direct_stays_alive: FAIL never ready",
     "bubble_hides: FAIL no window",

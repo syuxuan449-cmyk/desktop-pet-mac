@@ -2,7 +2,7 @@
 
 - structure: pass
 - open_launch: pass
-- open_stays_alive: fail
+- open_stays_alive: pass
 - direct_launch: fail
 - direct_stays_alive: fail
 - bubble_hides: fail
@@ -23,7 +23,6 @@
 - quit: fail
 
 ## failures
-- open_stays_alive: FAIL pids=[]
 - direct_launch: FAIL pids=[] ready=False
 - direct_stays_alive: FAIL never ready
 - bubble_hides: FAIL no window

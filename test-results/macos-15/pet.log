@@ -1,12 +1,14 @@
-==== 2026-10-29 08:02:03 启动 ====
+==== 2026-10-29 08:07:16 启动 ====
+[桌面小伙伴] ARCH arm64 BOOL B
+[桌面小伙伴] ARCH arm64 BOOL B
 [桌面小伙伴] ACTION startup
 [桌面小伙伴] ACTION startup
-[桌面小伙伴] 启动失败: TypeError: $.NSAttributedString.alloc.initWithStringAttributes is not a function. (In '$.NSAttributedString.alloc.initWithStringAttributes(text, dict)', '$.NSAttributedString.alloc.initWithStringAttributes' is undefined)
+[桌面小伙伴] 启动失败: TypeError: $.NSMutableAttributedString.alloc.initWithString is not a function. (In '$.NSMutableAttributedString.alloc.initWithString(String(text))', '$.NSMutableAttributedString.alloc.initWithString' is undefined)
 attr@
 makeButton@
 buildUI@
 run@
-[桌面小伙伴] 启动失败: TypeError: $.NSAttributedString.alloc.initWithStringAttributes is not a function. (In '$.NSAttributedString.alloc.initWithStringAttributes(text, dict)', '$.NSAttributedString.alloc.initWithStringAttributes' is undefined)
+[桌面小伙伴] 启动失败: TypeError: $.NSMutableAttributedString.alloc.initWithString is not a function. (In '$.NSMutableAttributedString.alloc.initWithString(String(text))', '$.NSMutableAttributedString.alloc.initWithString' is undefined)
 attr@
 makeButton@
 buildUI@
