@@ -1,5 +1,96 @@
 {
-  "windows": [],
+  "windows": [
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768,
+      "layer": 0
+    },
+    {
+      "y": 0,
+      "owner": "Spotlight",
+      "name": "Item-0",
+      "id": 19,
+      "w": 31,
+      "h": 24,
+      "x": 807,
+      "layer": 25
+    },
+    {
+      "w": 34,
+      "h": 24,
+      "y": 0,
+      "id": 11,
+      "layer": 25,
+      "owner": "Control Center",
+      "name": "BentoBox",
+      "x": 838
+    },
+    {
+      "w": 152,
+      "layer": 25,
+      "id": 10,
+      "y": 0,
+      "name": "Clock",
+      "x": 872,
+      "h": 24,
+      "owner": "Control Center"
+    },
+    {
+      "name": "Menubar",
+      "x": 0,
+      "layer": 24,
+      "h": 24,
+      "y": 0,
+      "w": 1024,
+      "id": 29,
+      "owner": "Window Server"
+    },
+    {
+      "w": 205,
+      "h": 285,
+      "x": 795,
+      "y": 465,
+      "name": "桌面小伙伴",
+      "id": 34,
+      "owner": "桌面小伙伴",
+      "layer": 3
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "x": 0,
+      "layer": 0,
+      "id": 33,
+      "owner": "osascript",
+      "name": "",
+      "y": 0
+    }
+  ],
   "screens": [
     {
       "x": 0,
@@ -12,5 +103,6 @@
       "vh": 743,
       "scale": 1
     }
-  ]
+  ],
+  "swift_windows": 6
 }
