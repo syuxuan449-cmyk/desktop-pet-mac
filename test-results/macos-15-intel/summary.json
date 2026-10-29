@@ -47,9 +47,9 @@
   "notes": [
     "structure: pass plutil=0 exec=True assets=True",
     "wallpaper rc=0 ",
-    "backdrop pid=4347",
+    "backdrop pid=10561",
     "open rc=0 ",
-    "open_launch: pass pids=[4363]",
+    "open_launch: pass pids=[10682]",
     "open_stays_alive: FAIL pids=[]",
     "direct_launch: FAIL pids=[] ready=False",
     "direct_stays_alive: FAIL never ready",

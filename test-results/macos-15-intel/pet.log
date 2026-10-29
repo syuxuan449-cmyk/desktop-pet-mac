@@ -1,2 +1,15 @@
-==== 2026-10-29 08:02:11 启动 ====
-/Users/runner/work/desktop-pet-mac/desktop-pet-mac/桌面小伙伴.app/Contents/Resources/DesktopPet.js: execution error: Error: Error: method types do not match the superclass method types (-2700)
+==== 2026-10-29 08:07:27 启动 ====
+[桌面小伙伴] ARCH x86_64 BOOL c
+[桌面小伙伴] ARCH x86_64 BOOL c
+[桌面小伙伴] ACTION startup
+[桌面小伙伴] ACTION startup
+[桌面小伙伴] 启动失败: TypeError: $.NSMutableAttributedString.alloc.initWithString is not a function. (In '$.NSMutableAttributedString.alloc.initWithString(String(text))', '$.NSMutableAttributedString.alloc.initWithString' is undefined)
+attr@
+makeButton@
+buildUI@
+run@
+[桌面小伙伴] 启动失败: TypeError: $.NSMutableAttributedString.alloc.initWithString is not a function. (In '$.NSMutableAttributedString.alloc.initWithString(String(text))', '$.NSMutableAttributedString.alloc.initWithString' is undefined)
+attr@
+makeButton@
+buildUI@
+run@
