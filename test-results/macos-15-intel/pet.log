@@ -1,4 +1,4 @@
-==== 2026-10-29 08:16:37 启动 ====
+==== 2026-10-29 08:20:27 启动 ====
 [桌面小伙伴] ARCH x86_64 BOOL c
 [桌面小伙伴] ARCH x86_64 BOOL c
 [桌面小伙伴] ACTION startup
@@ -29,3 +29,141 @@
 [桌面小伙伴] EVENT hit y=54.0 h=206.0 frac=0.262
 [桌面小伙伴] VISUAL happy
 [桌面小伙伴] VISUAL happy
+[桌面小伙伴] mouseUp 出错: TypeError: img.lockFocus is not a function. (In 'img.lockFocus()', 'img.lockFocus' is undefined)
+textLayer@
+addFloatingHearts@
+startPetting@
+onMouseUp@
+@
+@[native code]
+run@
+[桌面小伙伴] mouseUp 出错: TypeError: img.lockFocus is not a function. (In 'img.lockFocus()', 'img.lockFocus' is undefined)
+textLayer@
+addFloatingHearts@
+startPetting@
+onMouseUp@
+@
+@[native code]
+run@
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=220.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=220.0
+[桌面小伙伴] EVENT up x=102.0 y=220.0 onUi=false inImg=true
+[桌面小伙伴] EVENT up x=102.0 y=220.0 onUi=false inImg=true
+[桌面小伙伴] EVENT hit y=178.0 h=206.0 frac=0.864
+[桌面小伙伴] EVENT hit y=178.0 h=206.0 frac=0.864
+[桌面小伙伴] ACTION spank
+[桌面小伙伴] ACTION spank
+[桌面小伙伴] VISUAL angry
+[桌面小伙伴] VISUAL angry
+[桌面小伙伴] mouseUp 出错: TypeError: img.lockFocus is not a function. (In 'img.lockFocus()', 'img.lockFocus' is undefined)
+textLayer@
+addAngerEffects@
+startSpank@
+onMouseUp@
+@
+@[native code]
+run@
+[桌面小伙伴] mouseUp 出错: TypeError: img.lockFocus is not a function. (In 'img.lockFocus()', 'img.lockFocus' is undefined)
+textLayer@
+addAngerEffects@
+startSpank@
+onMouseUp@
+@
+@[native code]
+run@
+[桌面小伙伴] ACTION feed-blocked
+[桌面小伙伴] ACTION feed-blocked
+[桌面小伙伴] TIMER start bubble 1300ms repeats=false
+[桌面小伙伴] TIMER start bubble 1300ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] TIMER start bubble 1400ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] EVENT down clicks=2 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=2 x=102.0 y=96.0
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] EVENT down clicks=2 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=2 x=102.0 y=96.0
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION more-menu
+[桌面小伙伴] ACTION more-menu
+[桌面小伙伴] more 出错: Error: exception raised by object: In call to popUpMenuPositioningItem:atLocation:inView:appearance:, menu item null is not present in menu <NSMenu: 0x600001d90000>
+	Title: 桌面小伙伴
+	Supermenu: 0x0 (None), autoenable: NO
+	Previous menu: 0x0 (None)
+	Next menu: 0x0 (None)
+	Items:     (
+        "<NSMenuItem: 0x600002ce7410 \U5582\U98df\Uff08\U597d\U611f +2\Uff09>",
+        "<NSMenuItem: 0x600002ce7480 \U7761\U89c9 / \U9192\U6765>",
+        "<NSMenuItem: 0x600002ce74f0 \U6253\U5c41\U5c41\Uff08\U597d\U611f -2\Uff09>",
+        "<NSMenuItem: 0x600002ce7560 \U8df3\U4e2a\U821e>",
+        "<NSMenuItem: 0x600002ce75d0 >",
+        "<NSMenuItem: 0x600002cfc000 \U56de\U5230\U5c4f\U5e55\U53f3\U4e0b\U89d2>",
+        "<NSMenuItem: 0x600002cfc070 >",
+        "<NSMenuItem: 0x600002cfc230 \U9000\U51fa\U684c\U5ba0>"
+    )
+@[native code]
+showMoreMenu@
+@
+@
+@[native code]
+run@
+[桌面小伙伴] more 出错: Error: exception raised by object: In call to popUpMenuPositioningItem:atLocation:inView:appearance:, menu item null is not present in menu <NSMenu: 0x600001d90000>
+	Title: 桌面小伙伴
+	Supermenu: 0x0 (None), autoenable: NO
+	Previous menu: 0x0 (None)
+	Next menu: 0x0 (None)
+	Items:     (
+        "<NSMenuItem: 0x600002ce7410 \U5582\U98df\Uff08\U597d\U611f +2\Uff09>",
+        "<NSMenuItem: 0x600002ce7480 \U7761\U89c9 / \U9192\U6765>",
+        "<NSMenuItem: 0x600002ce74f0 \U6253\U5c41\U5c41\Uff08\U597d\U611f -2\Uff09>",
+        "<NSMenuItem: 0x600002ce7560 \U8df3\U4e2a\U821e>",
+        "<NSMenuItem: 0x600002ce75d0 >",
+        "<NSMenuItem: 0x600002cfc000 \U56de\U5230\U5c4f\U5e55\U53f3\U4e0b\U89d2>",
+        "<NSMenuItem: 0x600002cfc070 >",
+        "<NSMenuItem: 0x600002cfc230 \U9000\U51fa\U684c\U5ba0>"
+    )
+@[native code]
+showMoreMenu@
+@
+@
+@[native code]
+run@
+[桌面小伙伴] ACTION toolbar-hide
+[桌面小伙伴] ACTION toolbar-hide
+[桌面小伙伴] TIMER start bubble 2200ms repeats=false
+[桌面小伙伴] TIMER start bubble 2200ms repeats=false
+[桌面小伙伴] ACTION right-menu
+[桌面小伙伴] ACTION right-menu
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=150.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=150.0
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] TIMER start bubble 1200ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION quit
+[桌面小伙伴] ACTION quit

@@ -1,0 +1,118 @@
+{
+  "windows": [
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "layer": 0
+    },
+    {
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "layer": 0
+    },
+    {
+      "y": 3,
+      "w": 10,
+      "owner": "Window Server",
+      "id": 37,
+      "name": "StatusIndicator",
+      "x": 1755,
+      "h": 18,
+      "layer": 2147483630
+    },
+    {
+      "h": 24,
+      "y": 0,
+      "layer": 25,
+      "name": "Item-0",
+      "id": 24,
+      "owner": "Spotlight",
+      "x": 1703,
+      "w": 31
+    },
+    {
+      "x": 1734,
+      "w": 34,
+      "id": 16,
+      "h": 24,
+      "name": "BentoBox",
+      "layer": 25,
+      "owner": "Control Center",
+      "y": 0
+    },
+    {
+      "id": 11,
+      "owner": "Control Center",
+      "x": 1768,
+      "layer": 25,
+      "h": 24,
+      "name": "Clock",
+      "y": 0,
+      "w": 152
+    },
+    {
+      "h": 24,
+      "layer": 24,
+      "id": 26,
+      "owner": "Window Server",
+      "x": 0,
+      "name": "Menubar",
+      "y": 0,
+      "w": 1920
+    },
+    {
+      "layer": 3,
+      "id": 38,
+      "name": "桌面小伙伴",
+      "h": 285,
+      "x": 1691,
+      "owner": "osascript",
+      "y": 777,
+      "w": 205
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "layer": 0,
+      "h": 1080,
+      "id": 31,
+      "owner": "osascript",
+      "name": "",
+      "w": 1920
+    }
+  ],
+  "screens": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "vx": 0,
+      "vy": 0,
+      "vw": 1920,
+      "vh": 1055,
+      "scale": 1
+    }
+  ],
+  "swift_windows": 7
+}

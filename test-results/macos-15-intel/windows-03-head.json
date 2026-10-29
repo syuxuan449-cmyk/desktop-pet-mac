@@ -21,64 +21,84 @@
       "layer": 0
     },
     {
-      "owner": "Window Server",
-      "w": 10,
-      "layer": 2147483630,
-      "name": "StatusIndicator",
-      "h": 18,
-      "y": 3,
-      "id": 38,
-      "x": 1755
+      "id": 0,
+      "owner": "osascript",
+      "name": "",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "layer": 0
     },
     {
+      "x": 1755,
+      "w": 10,
+      "h": 18,
+      "y": 3,
+      "owner": "Window Server",
+      "layer": 2147483630,
+      "name": "StatusIndicator",
+      "id": 37
+    },
+    {
+      "id": 24,
+      "x": 1703,
+      "y": 0,
       "w": 31,
       "h": 24,
-      "owner": "Spotlight",
-      "layer": 25,
       "name": "Item-0",
-      "y": 0,
-      "id": 24,
-      "x": 1703
+      "layer": 25,
+      "owner": "Spotlight"
     },
     {
       "w": 34,
-      "name": "BentoBox",
-      "y": 0,
-      "owner": "Control Center",
       "layer": 25,
       "x": 1734,
+      "name": "BentoBox",
       "h": 24,
-      "id": 21
+      "y": 0,
+      "id": 16,
+      "owner": "Control Center"
     },
     {
+      "name": "Clock",
+      "owner": "Control Center",
       "layer": 25,
+      "y": 0,
       "x": 1768,
       "w": 152,
-      "owner": "Control Center",
-      "name": "Clock",
-      "id": 12,
-      "y": 0,
-      "h": 24
+      "h": 24,
+      "id": 11
     },
     {
-      "y": 0,
       "layer": 24,
       "w": 1920,
-      "id": 31,
-      "owner": "Window Server",
       "x": 0,
+      "id": 26,
+      "name": "Menubar",
+      "y": 0,
       "h": 24,
-      "name": "Menubar"
+      "owner": "Window Server"
     },
     {
-      "id": 36,
-      "layer": 0,
-      "y": 0,
-      "h": 1080,
+      "layer": 3,
       "owner": "osascript",
-      "x": 0,
+      "name": "桌面小伙伴",
+      "x": 1691,
+      "y": 777,
+      "h": 285,
+      "id": 38,
+      "w": 205
+    },
+    {
+      "id": 31,
+      "h": 1080,
       "w": 1920,
-      "name": ""
+      "x": 0,
+      "y": 0,
+      "owner": "osascript",
+      "name": "",
+      "layer": 0
     }
   ],
   "screens": [
@@ -94,5 +114,5 @@
       "scale": 1
     }
   ],
-  "swift_windows": 6
+  "swift_windows": 7
 }
