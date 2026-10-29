@@ -305,27 +305,35 @@ function updateAffection(amount) {
 
 // ---------- 爱心 / 怒气特效 ----------
 function textLayer(text, size, weight, color) {
-  // Draw the glyph into an NSImage. CATextLayer.setForegroundColor: crashes on
-  // Sequoia JXA because NSColor.CGColor is a dangling CF object (CFEqual fault).
-  var w = Math.ceil(size * (String(text).length > 1 ? 1.8 : 1.6));
-  var h = Math.ceil(size * 1.5);
-  var img = $.NSImage.alloc.initWithSize($.NSMakeSize(w, h));
-  img.lockFocus();
+  // NSImage.lockFocus and CATextLayer.setForegroundColor both blow up under
+  // Sequoia JXA. A text field already knows how to color itself; render it to PDF.
+  var w = Math.ceil(size * (String(text).length > 1 ? 2.4 : 1.8));
+  var h = Math.ceil(size * 1.8);
   try {
-    var ns = $.NSString.stringWithString(String(text));
-    var dict = $.NSDictionary.dictionaryWithObjectsForKeys(
-      $([font(size, weight), color]), $(['NSFont', 'NSColor']));
-    if (ns.drawAtPointWithAttributes) ns.drawAtPointWithAttributes($.NSMakePoint(0, 2), dict);
-    else ns.drawInRectWithAttributes($.NSMakeRect(0, 0, w, h), dict);
+    var field = $.NSTextField.labelWithString(String(text));
+    field.setTextColor(color);
+    field.setFont(font(size, weight));
+    field.setAlignment(2);
+    field.setDrawsBackground(false);
+    field.setFrame($.NSMakeRect(0, 0, w, h));
+    var pdf = field.dataWithPDFInsideRect(field.bounds);
+    var img = $.NSImage.alloc.initWithData(pdf);
+    if (img && !(img.isNil && img.isNil())) {
+      if (!S.glyphHold) S.glyphHold = [];
+      S.glyphHold.push(img);
+      var layer = $.CALayer.layer;
+      layer.setContents(img);
+      layer.setContentsScale(UI.scale || 1);
+      layer.setContentsGravity('resizeAspect');
+      return layer;
+    }
   } catch (e) { log('glyph ' + e); }
-  img.unlockFocus();
-  if (!S.glyphHold) S.glyphHold = [];
-  S.glyphHold.push(img);
-  var layer = $.CALayer.layer;
-  layer.setContents(img);
-  layer.setContentsScale(UI.scale || 1);
-  layer.setContentsGravity('resizeAspect');
-  return layer;
+  var tl = $.CATextLayer.layer;
+  tl.setString(String(text));
+  tl.setFontSize(size);
+  tl.setAlignmentMode('center');
+  tl.setContentsScale(UI.scale || 1);
+  return tl;
 }
 
 function addFloatingHearts(count) {
@@ -665,11 +673,17 @@ function showMoreMenu() {
   activatePet();
   // Placement=Top：菜单出现在“⋯”按钮上方（系统会自动避开屏幕边缘）
   var f = UI.moreButton.frame;
-  var mh = 160;
-  try { mh = UI.menu.size.height || mh; } catch (e) {}
-  // UI.view 是翻转坐标（y 向下），location 为菜单左上角
+  var mh = 180;
+  try {
+    var measured = Number(UI.menu.size.height);
+    if (measured > 40) mh = measured;
+  } catch (e) {}
+  // null becomes kCFNull and AppKit rejects it ("menu item null is not present").
+  // The point is the top-left of the first item, in the flipped view (y down).
+  var anchor = UI.menu.itemAtIndex(0);
   UI.app.activateIgnoringOtherApps(true);
-  UI.menu.popUpMenuPositioningItemAtLocationInView(null, $.NSMakePoint(f.origin.x, f.origin.y - mh - 4), UI.view);
+  UI.menu.popUpMenuPositioningItemAtLocationInView(
+    anchor, $.NSMakePoint(f.origin.x, Math.max(4, f.origin.y - mh - 4)), UI.view);
 }
 
 // ---------- Objective-C 子类 ----------
