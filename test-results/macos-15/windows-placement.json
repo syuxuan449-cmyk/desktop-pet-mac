@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "layer": 2147483630,
       "h": 18,
       "name": "StatusIndicator",
-      "id": 36,
-      "y": 3,
-      "w": 10,
       "x": 859,
-      "owner": "Window Server"
+      "owner": "Window Server",
+      "y": 3,
+      "layer": 2147483630,
+      "id": 36,
+      "w": 10
     },
     {
-      "owner": "Spotlight",
+      "id": 18,
+      "x": 807,
+      "w": 31,
       "layer": 25,
       "h": 24,
-      "id": 21,
-      "w": 31,
-      "name": "Item-0",
-      "x": 807,
+      "y": 0,
+      "owner": "Spotlight",
+      "name": "Item-0"
+    },
+    {
+      "w": 34,
+      "id": 22,
+      "owner": "Control Center",
+      "name": "BentoBox",
+      "x": 838,
+      "layer": 25,
+      "h": 24,
       "y": 0
     },
     {
-      "id": 11,
-      "name": "BentoBox",
-      "x": 838,
-      "y": 0,
-      "w": 34,
-      "layer": 25,
-      "owner": "Control Center",
-      "h": 24
-    },
-    {
-      "layer": 25,
+      "h": 24,
+      "id": 21,
       "name": "Clock",
-      "owner": "Control Center",
-      "w": 152,
-      "id": 10,
+      "layer": 25,
       "x": 872,
       "y": 0,
+      "owner": "Control Center",
+      "w": 152
+    },
+    {
+      "layer": 24,
+      "w": 1024,
+      "y": 0,
+      "name": "Menubar",
+      "owner": "Window Server",
+      "id": 29,
+      "x": 0,
       "h": 24
     },
     {
-      "name": "Menubar",
-      "y": 0,
-      "w": 1024,
-      "id": 33,
-      "x": 0,
-      "owner": "Window Server",
-      "h": 24,
-      "layer": 24
-    },
-    {
+      "x": 795,
+      "w": 205,
       "id": 37,
+      "h": 285,
       "name": "桌面小伙伴",
       "owner": "osascript",
-      "x": 795,
-      "y": 465,
-      "h": 285,
       "layer": 3,
-      "w": 205
+      "y": 465
     },
     {
-      "name": "",
-      "layer": 0,
       "y": 0,
+      "owner": "osascript",
       "id": 34,
-      "h": 768,
+      "name": "",
       "x": 0,
       "w": 1024,
-      "owner": "osascript"
+      "layer": 0,
+      "h": 768
     }
   ],
   "screens": [
