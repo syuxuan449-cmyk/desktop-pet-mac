@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "h": 18,
-      "layer": 2147483630,
-      "x": 859,
       "owner": "Window Server",
+      "x": 859,
+      "name": "StatusIndicator",
       "y": 3,
-      "w": 10,
       "id": 36,
-      "name": "StatusIndicator"
+      "h": 18,
+      "w": 10,
+      "layer": 2147483630
     },
     {
-      "owner": "Spotlight",
+      "name": "Item-0",
       "layer": 25,
-      "w": 31,
-      "id": 18,
-      "y": 0,
       "x": 807,
+      "id": 17,
+      "y": 0,
+      "w": 31,
       "h": 24,
-      "name": "Item-0"
+      "owner": "Spotlight"
     },
     {
-      "id": 22,
-      "y": 0,
-      "layer": 25,
       "name": "BentoBox",
-      "owner": "Control Center",
       "x": 838,
       "w": 34,
+      "y": 0,
+      "owner": "Control Center",
+      "id": 22,
+      "layer": 25,
       "h": 24
     },
     {
-      "id": 21,
-      "w": 152,
-      "h": 24,
-      "owner": "Control Center",
-      "x": 872,
-      "layer": 25,
       "name": "Clock",
-      "y": 0
-    },
-    {
-      "layer": 24,
-      "x": 0,
-      "id": 29,
-      "owner": "Window Server",
       "h": 24,
-      "w": 1024,
-      "name": "Menubar",
-      "y": 0
+      "y": 0,
+      "layer": 25,
+      "id": 21,
+      "x": 872,
+      "w": 152,
+      "owner": "Control Center"
     },
     {
-      "x": 795,
-      "h": 285,
-      "name": "桌面小伙伴",
-      "id": 37,
-      "layer": 3,
-      "y": 465,
-      "w": 205,
-      "owner": "osascript"
-    },
-    {
-      "id": 34,
       "w": 1024,
-      "h": 768,
-      "layer": 0,
       "x": 0,
+      "y": 0,
+      "id": 33,
+      "h": 24,
+      "owner": "Window Server",
+      "name": "Menubar",
+      "layer": 24
+    },
+    {
+      "layer": 3,
+      "id": 37,
+      "w": 205,
+      "y": 465,
       "owner": "osascript",
+      "name": "桌面小伙伴",
+      "x": 795,
+      "h": 285
+    },
+    {
+      "y": 0,
       "name": "",
-      "y": 0
+      "w": 1024,
+      "owner": "osascript",
+      "layer": 0,
+      "id": 34,
+      "h": 768,
+      "x": 0
     }
   ],
   "screens": [

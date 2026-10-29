@@ -1,4 +1,4 @@
-==== 2026-10-29 08:30:37 启动 ====
+==== 2026-10-29 08:33:20 启动 ====
 [桌面小伙伴] ARCH arm64 BOOL B
 [桌面小伙伴] ARCH arm64 BOOL B
 [桌面小伙伴] ACTION startup
@@ -93,6 +93,10 @@
 [桌面小伙伴] TIMER start bubble 1900ms repeats=false
 [桌面小伙伴] TIMER start state 1500ms repeats=false
 [桌面小伙伴] TIMER start state 1500ms repeats=false
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION idle
 [桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
 [桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
 [桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
