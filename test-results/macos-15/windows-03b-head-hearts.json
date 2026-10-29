@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "owner": "Window Server",
-      "name": "StatusIndicator",
+      "y": 3,
+      "id": 35,
       "h": 18,
-      "w": 10,
+      "owner": "Window Server",
       "x": 859,
-      "id": 37,
-      "layer": 2147483630,
-      "y": 3
+      "w": 10,
+      "name": "StatusIndicator",
+      "layer": 2147483630
     },
     {
-      "name": "Item-0",
       "y": 0,
       "w": 31,
-      "h": 24,
+      "layer": 25,
       "owner": "Spotlight",
-      "layer": 25,
+      "name": "Item-0",
       "x": 807,
-      "id": 17
-    },
-    {
-      "name": "BentoBox",
-      "id": 23,
       "h": 24,
-      "y": 0,
-      "x": 838,
-      "layer": 25,
-      "w": 34,
-      "owner": "Control Center"
+      "id": 20
     },
     {
-      "name": "Clock",
-      "id": 22,
-      "x": 872,
-      "w": 152,
       "owner": "Control Center",
-      "layer": 25,
       "h": 24,
+      "name": "BentoBox",
+      "x": 838,
+      "w": 34,
+      "layer": 25,
+      "y": 0,
+      "id": 22
+    },
+    {
+      "owner": "Control Center",
+      "w": 152,
+      "id": 21,
+      "name": "Clock",
+      "y": 0,
+      "h": 24,
+      "x": 872,
+      "layer": 25
+    },
+    {
+      "w": 1024,
+      "id": 30,
+      "h": 24,
+      "x": 0,
+      "name": "Menubar",
+      "layer": 24,
+      "owner": "Window Server",
       "y": 0
     },
     {
-      "h": 24,
-      "y": 0,
-      "w": 1024,
-      "id": 34,
-      "name": "Menubar",
-      "x": 0,
-      "layer": 24,
-      "owner": "Window Server"
-    },
-    {
-      "layer": 3,
-      "y": 465,
       "x": 795,
-      "name": "桌面小伙伴",
       "w": 205,
       "owner": "osascript",
-      "id": 38,
-      "h": 285
+      "h": 285,
+      "id": 36,
+      "name": "桌面小伙伴",
+      "y": 465,
+      "layer": 3
     },
     {
-      "id": 35,
-      "w": 1024,
-      "x": 0,
-      "owner": "osascript",
       "y": 0,
+      "owner": "osascript",
+      "name": "",
+      "id": 33,
       "h": 768,
       "layer": 0,
-      "name": ""
+      "x": 0,
+      "w": 1024
     }
   ],
   "screens": [
