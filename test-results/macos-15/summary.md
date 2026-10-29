@@ -11,10 +11,18 @@
 - bubble: pass
 - direct_stays_alive: pass
 - bubble_hides: pass
-- head_click: fail
-- head_returns_idle: fail
+- head_click: pass
+- head_returns_idle: pass
+- bottom_spank: pass
+- spank_returns_idle: pass
+- feed: pass
+- feed_returns_idle: pass
+- sleep: pass
+- wake: pass
+- dance: fail
+- dance_ends: fail
 
 ## failures
-- head_click: FAIL log
-- head_returns_idle: FAIL state timer
-- exception 'NoneType' object is not subscriptable
+- dance: FAIL double-click
+- dance_ends: FAIL dance timer
+- exception pet window is gone

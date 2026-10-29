@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "id": 35,
-      "owner": "Window Server",
+      "id": 36,
       "x": 859,
-      "name": "StatusIndicator",
-      "y": 3,
       "w": 10,
-      "layer": 2147483630,
-      "h": 18
+      "y": 3,
+      "owner": "Window Server",
+      "name": "StatusIndicator",
+      "h": 18,
+      "layer": 2147483630
     },
     {
-      "id": 19,
+      "name": "Item-0",
+      "x": 807,
+      "id": 18,
       "layer": 25,
       "w": 31,
-      "x": 807,
       "y": 0,
-      "h": 24,
       "owner": "Spotlight",
-      "name": "Item-0"
+      "h": 24
     },
     {
-      "id": 11,
-      "w": 34,
-      "y": 0,
-      "owner": "Control Center",
       "name": "BentoBox",
+      "y": 0,
       "h": 24,
       "layer": 25,
-      "x": 838
+      "owner": "Control Center",
+      "x": 838,
+      "w": 34,
+      "id": 22
     },
     {
-      "y": 0,
       "w": 152,
+      "layer": 25,
+      "x": 872,
+      "id": 21,
       "h": 24,
       "owner": "Control Center",
-      "layer": 25,
-      "id": 10,
-      "name": "Clock",
-      "x": 872
-    },
-    {
-      "layer": 24,
-      "name": "Menubar",
-      "x": 0,
-      "id": 29,
       "y": 0,
-      "h": 24,
-      "w": 1024,
-      "owner": "Window Server"
+      "name": "Clock"
     },
     {
-      "y": 465,
-      "name": "桌面小伙伴",
-      "x": 795,
-      "id": 36,
-      "w": 205,
-      "h": 285,
+      "id": 29,
+      "x": 0,
+      "y": 0,
+      "name": "Menubar",
+      "owner": "Window Server",
+      "w": 1024,
+      "layer": 24,
+      "h": 24
+    },
+    {
       "layer": 3,
-      "owner": "osascript"
+      "id": 37,
+      "name": "桌面小伙伴",
+      "h": 285,
+      "owner": "osascript",
+      "y": 465,
+      "w": 205,
+      "x": 795
     },
     {
       "h": 768,
-      "owner": "osascript",
-      "layer": 0,
       "x": 0,
-      "id": 33,
-      "y": 0,
       "name": "",
-      "w": 1024
+      "w": 1024,
+      "id": 34,
+      "y": 0,
+      "layer": 0,
+      "owner": "osascript"
     }
   ],
   "screens": [

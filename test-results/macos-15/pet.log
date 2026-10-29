@@ -1,4 +1,4 @@
-==== 2026-10-29 08:13:09 启动 ====
+==== 2026-10-29 08:16:37 启动 ====
 [桌面小伙伴] ARCH arm64 BOOL B
 [桌面小伙伴] ARCH arm64 BOOL B
 [桌面小伙伴] ACTION startup
@@ -21,3 +21,83 @@
 [桌面小伙伴] ACTION ready
 [桌面小伙伴] ACTION bubble-hide
 [桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
+[桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
+[桌面小伙伴] EVENT hit y=54.0 h=206.0 frac=0.262
+[桌面小伙伴] EVENT hit y=54.0 h=206.0 frac=0.262
+[桌面小伙伴] VISUAL happy
+[桌面小伙伴] VISUAL happy
+[桌面小伙伴] TIMER start cleanup 400ms repeats=true
+[桌面小伙伴] TIMER start cleanup 400ms repeats=true
+[桌面小伙伴] ACTION head
+[桌面小伙伴] ACTION head
+[桌面小伙伴] TIMER start bubble 1800ms repeats=false
+[桌面小伙伴] TIMER start bubble 1800ms repeats=false
+[桌面小伙伴] TIMER start state 1700ms repeats=false
+[桌面小伙伴] TIMER start state 1700ms repeats=false
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=220.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=220.0
+[桌面小伙伴] EVENT up x=102.0 y=220.0 onUi=false inImg=true
+[桌面小伙伴] EVENT up x=102.0 y=220.0 onUi=false inImg=true
+[桌面小伙伴] EVENT hit y=178.0 h=206.0 frac=0.864
+[桌面小伙伴] EVENT hit y=178.0 h=206.0 frac=0.864
+[桌面小伙伴] ACTION spank
+[桌面小伙伴] ACTION spank
+[桌面小伙伴] VISUAL angry
+[桌面小伙伴] VISUAL angry
+[桌面小伙伴] TIMER start bubble 2250ms repeats=false
+[桌面小伙伴] TIMER start bubble 2250ms repeats=false
+[桌面小伙伴] TIMER start angry 2300ms repeats=false
+[桌面小伙伴] TIMER start angry 2300ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION angry-end
+[桌面小伙伴] ACTION angry-end
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] ACTION feed
+[桌面小伙伴] ACTION feed
+[桌面小伙伴] VISUAL eating
+[桌面小伙伴] VISUAL eating
+[桌面小伙伴] TIMER start cleanup 400ms repeats=true
+[桌面小伙伴] TIMER start cleanup 400ms repeats=true
+[桌面小伙伴] TIMER start bubble 2300ms repeats=false
+[桌面小伙伴] TIMER start bubble 2300ms repeats=false
+[桌面小伙伴] TIMER start state 2600ms repeats=false
+[桌面小伙伴] TIMER start state 2600ms repeats=false
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] ACTION bubble-hide
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] VISUAL idle
+[桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION idle
+[桌面小伙伴] ACTION sleep
+[桌面小伙伴] ACTION sleep
+[桌面小伙伴] VISUAL sleeping
+[桌面小伙伴] VISUAL sleeping
+[桌面小伙伴] TIMER start bubble 2200ms repeats=false
+[桌面小伙伴] TIMER start bubble 2200ms repeats=false
+[桌面小伙伴] ACTION wake
+[桌面小伙伴] ACTION wake
+[桌面小伙伴] VISUAL happy
+[桌面小伙伴] VISUAL happy
+[桌面小伙伴] TIMER start bubble 1900ms repeats=false
+[桌面小伙伴] TIMER start bubble 1900ms repeats=false
+[桌面小伙伴] TIMER start state 1500ms repeats=false
+[桌面小伙伴] TIMER start state 1500ms repeats=false
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT down clicks=1 x=102.0 y=96.0
+[桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
+[桌面小伙伴] EVENT up x=102.0 y=96.0 onUi=false inImg=true
+[桌面小伙伴] EVENT hit y=54.0 h=206.0 frac=0.262
+[桌面小伙伴] EVENT hit y=54.0 h=206.0 frac=0.262
+[桌面小伙伴] VISUAL happy
+[桌面小伙伴] VISUAL happy
