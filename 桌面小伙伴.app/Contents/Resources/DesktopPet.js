@@ -305,10 +305,18 @@ function updateAffection(amount) {
 
 // ---------- 爱心 / 怒气特效 ----------
 function textLayer(text, size, weight, color) {
+  // Plain CATextLayer string: the JXA bridge on Sequoia does not export
+  // NSAttributedString initializers, and hearts only need a colored glyph.
   var tl = $.CATextLayer.layer;
-  tl.setString(attr(text, font(size, weight), color, true));
+  tl.setString(String(text));
+  tl.setFontSize(size);
   tl.setAlignmentMode('center');
-  tl.setContentsScale(UI.scale);
+  tl.setContentsScale(UI.scale || 2);
+  try {
+    var name = String(font(size, weight).fontName || '');
+    tl.setFont(name && name.charAt(0) !== '.' ? name : 'PingFangSC-Regular');
+  } catch (e) {}
+  try { tl.setForegroundColor(color.CGColor); } catch (e) {}
   return tl;
 }
 
@@ -406,7 +414,8 @@ function scheduleIdle(ms) {
 
 function setSleepButton(title) {
   S.sleepTitle = title;
-  UI.sleepButton.setAttributedTitle(attr(title, font(12, 0), rgba(0x5C, 0x30, 0x42), true));
+  UI.sleepButton.setTitle(title);
+  if (UI.sleepLabel) UI.sleepLabel.setStringValue(title);
 }
 
 function stopDanceAnimation() {
@@ -771,12 +780,18 @@ function makeButton(title, sel, x, w, color, fill) {
   var h = 25, y = WIN_H - 4 - 3 - h;
   var bg = makeBox(rect(x, y, w, h), fill, rgba(255, 255, 255, 0x45), 1, 7);
   UI.view.addSubview(bg);
-  var b = $.DPButton.buttonWithTitleTargetAction(title, UI.controller, sel);
+  // Title is an NSTextField. Sequoia's JXA bridge does not export
+  // initWithString: / initWithString:attributes:, so attributed button titles crash.
+  var lab = makeLabel(title, font(12, 0), color, false);
+  lab.setFrame(rect(x, y, w, h));
+  UI.view.addSubview(lab);
+  var b = $.DPButton.buttonWithTitleTargetAction('', UI.controller, sel);
   b.setBordered(false);
+  try { b.setTransparent(true); } catch (e) { log('button transparent ' + e); }
   b.setFrame(rect(x, y, w, h));
-  b.setAttributedTitle(attr(title, font(12, 0), color, true));
   UI.view.addSubview(b);
-  UI.buttons.push(bg, b);
+  UI.buttons.push(bg, lab, b);
+  if (title === '睡觉') UI.sleepLabel = lab;
   return b;
 }
 
@@ -882,6 +897,7 @@ function buildUI() {
   menu.addItem($.NSMenuItem.separatorItem);
   item('退出桌宠', 'quitPet:');
   UI.menu = menu;
+  log('UI built');
 }
 
 function run(argv) {

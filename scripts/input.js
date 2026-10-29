@@ -44,25 +44,61 @@ function strOf(dict, key) {
 }
 
 function windows() {
+  var arr = [];
+  // CGWindowList from a second osascript often returns nothing without the
+  // screen-recording TCC grant. System Events is allowed for /usr/bin/osascript
+  // on GitHub-hosted runners and reports global top-left window frames.
+  try {
+    var se = Application('System Events');
+    var procs = se.processes();
+    for (var i = 0; i < procs.length; i++) {
+      var proc = procs[i];
+      var owner = '';
+      try { owner = String(proc.name()); } catch (e) { continue; }
+      if (owner !== 'osascript' && owner !== 'DesktopPet' && owner.indexOf('桌面') !== 0) continue;
+      var wins = [];
+      try { wins = proc.windows(); } catch (e2) { continue; }
+      for (var j = 0; j < wins.length; j++) {
+        var w = wins[j];
+        var pos = [0, 0], sz = [0, 0], title = '';
+        try { pos = w.position(); } catch (e3) {}
+        try { sz = w.size(); } catch (e4) {}
+        try { title = String(w.name() || ''); } catch (e5) {}
+        arr.push({
+          id: 0,
+          owner: owner,
+          name: title,
+          x: Number(pos[0]) || 0,
+          y: Number(pos[1]) || 0,
+          w: Number(sz[0]) || 0,
+          h: Number(sz[1]) || 0,
+          layer: 0
+        });
+      }
+    }
+  } catch (e) {
+    stderr('system events windows ' + e);
+  }
   var opts = Number($.kCGWindowListOptionOnScreenOnly) | Number($.kCGWindowListExcludeDesktopElements);
   if (!opts) opts = 1 | 16;
-  var info = $.CGWindowListCopyWindowInfo(opts, $.kCGNullWindowID);
-  var arr = [];
-  var n = Number(info.count);
-  for (var i = 0; i < n; i++) {
-    var d = info.objectAtIndex(i);
-    var b = d.objectForKey('kCGWindowBounds');
-    arr.push({
-      id: numOf(d, 'kCGWindowNumber'),
-      owner: strOf(d, 'kCGWindowOwnerName'),
-      name: strOf(d, 'kCGWindowName'),
-      x: numOf(b, 'X'),
-      y: numOf(b, 'Y'),
-      w: numOf(b, 'Width'),
-      h: numOf(b, 'Height'),
-      layer: numOf(d, 'kCGWindowLayer')
-    });
-  }
+  try {
+    var info = $.CGWindowListCopyWindowInfo(opts, $.kCGNullWindowID);
+    var n = Number(info.count);
+    for (var k = 0; k < n; k++) {
+      var d = info.objectAtIndex(k);
+      var b = d.objectForKey('kCGWindowBounds');
+      arr.push({
+        id: numOf(d, 'kCGWindowNumber'),
+        owner: strOf(d, 'kCGWindowOwnerName'),
+        name: strOf(d, 'kCGWindowName'),
+        x: numOf(b, 'X'),
+        y: numOf(b, 'Y'),
+        w: numOf(b, 'Width'),
+        h: numOf(b, 'Height'),
+        layer: numOf(d, 'kCGWindowLayer')
+      });
+    }
+  } catch (e6) {}
   var screens = [];
   var ss = $.NSScreen.screens;
   var sn = Number(ss.count);

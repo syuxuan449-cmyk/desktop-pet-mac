@@ -196,15 +196,50 @@ def jxa(*args, timeout=30):
     return r
 
 
+LISTER = None
+
+
+def ensure_lister():
+    global LISTER
+    if LISTER is not None:
+        return LISTER
+    dest = Path("/tmp/pet-listwindows")
+    src = ROOT / "scripts" / "listwindows.swift"
+    r = run(["xcrun", "swiftc", "-O", "-o", str(dest), str(src)], timeout=180)
+    if r.returncode != 0 or not dest.exists():
+        S.note("swiftc failed %s" % ((r.stderr or r.stdout or "")[:400]))
+        LISTER = ""
+    else:
+        LISTER = str(dest)
+        S.note("window lister %s" % LISTER)
+    return LISTER
+
+
 def query_windows():
-    r = jxa("windows", timeout=20)
+    base = {"windows": [], "screens": []}
+    r = jxa("windows", timeout=25)
     text = (r.stdout or "").strip()
-    if not text:
-        return {"windows": [], "screens": [], "error": (r.stderr or "")[:400]}
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError as e:
-        return {"windows": [], "screens": [], "error": str(e), "raw": text[:400]}
+    if text:
+        try:
+            base = json.loads(text)
+        except json.JSONDecodeError as e:
+            base = {"windows": [], "screens": [], "error": str(e), "raw": text[:400]}
+    else:
+        base["error"] = (r.stderr or "")[:400]
+    lister = ensure_lister()
+    if lister:
+        rr = run([lister], timeout=15)
+        if rr.returncode == 0 and (rr.stdout or "").strip():
+            try:
+                extra = json.loads(rr.stdout)
+                if extra.get("windows"):
+                    base["windows"] = list(base.get("windows") or []) + extra["windows"]
+                    base["swift_windows"] = len(extra["windows"])
+            except json.JSONDecodeError as e:
+                S.note("lister json %s" % e)
+        elif rr.returncode != 0:
+            S.note("lister rc=%s %s" % (rr.returncode, (rr.stderr or "")[:200]))
+    return base
 
 
 def find_pet(data):
@@ -215,8 +250,8 @@ def find_pet(data):
             cands.append(w)
     if not cands:
         return None
-    cands.sort(key=lambda w: (w.get("x", 0) + w.get("y", 0)), reverse=True)
-    return cands[0]
+    cands.sort(key=lambda w: ((1 if w.get("id") else 0), w.get("x", 0) + w.get("y", 0)))
+    return cands[-1]
 
 
 def wait_window(timeout=15):
@@ -264,7 +299,7 @@ def capture(name, expand=40, full=False):
     h = max(1, min(h, int(scr["h"]) - y))
     dest = OUT / ("%s.png" % name)
     run(["/usr/sbin/screencapture", "-x", "-R", "%d,%d,%d,%d" % (x, y, w, h), "-t", "png", str(dest)], timeout=30)
-    if name in ("01-idle", "03-head", "05-angry", "07-feed", "09-sleep", "11-dance", "13-more-menu"):
+    if int(win.get("id") or 0) > 0 and name in ("01-idle", "03-head", "05-angry", "07-feed", "09-sleep", "11-dance", "13-more-menu"):
         run(["/usr/sbin/screencapture", "-x", "-o", "-l", str(int(win["id"])), "-t", "png", str(OUT / ("win-%s.png" % name))], timeout=30)
     return win, data
 
@@ -407,6 +442,7 @@ def prepare_desktop():
     run(["defaults", "write", "com.apple.finder", "CreateDesktop", "-bool", "false"])
     run(["killall", "Finder"])
     run(["launchctl", "setenv", "PET_CI", "1"])
+    Path("/tmp/pet-ci").write_text("1", encoding="utf-8")
     start_backdrop()
     time.sleep(1.5)
 
@@ -730,6 +766,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     os.environ["PET_CI"] = "1"
     try:
+        ensure_lister()
         structure()
         prepare_desktop()
         opened = launch_open()
