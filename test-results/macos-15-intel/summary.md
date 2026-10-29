@@ -17,4 +17,4 @@
 ## failures
 - head_click: FAIL log
 - head_returns_idle: FAIL state timer
-- exception 'NoneType' object is not subscriptable
+- exception pet window is gone

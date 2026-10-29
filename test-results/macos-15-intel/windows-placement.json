@@ -31,74 +31,74 @@
       "layer": 0
     },
     {
-      "owner": "Window Server",
-      "id": 39,
-      "layer": 2147483630,
-      "y": 3,
       "h": 18,
+      "y": 3,
       "w": 10,
-      "x": 1755,
-      "name": "StatusIndicator"
+      "id": 38,
+      "name": "StatusIndicator",
+      "layer": 2147483630,
+      "owner": "Window Server",
+      "x": 1755
     },
     {
       "h": 24,
-      "y": 0,
-      "x": 1703,
-      "owner": "Spotlight",
       "name": "Item-0",
+      "x": 1703,
+      "w": 31,
       "layer": 25,
-      "id": 25,
-      "w": 31
+      "id": 24,
+      "y": 0,
+      "owner": "Spotlight"
     },
     {
       "name": "BentoBox",
       "x": 1734,
       "y": 0,
-      "w": 34,
+      "id": 21,
       "layer": 25,
+      "w": 34,
       "h": 24,
-      "id": 16,
       "owner": "Control Center"
     },
     {
-      "layer": 25,
-      "w": 152,
-      "x": 1768,
-      "h": 24,
-      "y": 0,
-      "id": 11,
       "owner": "Control Center",
-      "name": "Clock"
-    },
-    {
-      "owner": "Window Server",
-      "id": 32,
-      "x": 0,
-      "name": "Menubar",
-      "y": 0,
-      "w": 1920,
+      "w": 152,
       "h": 24,
-      "layer": 24
+      "layer": 25,
+      "x": 1768,
+      "name": "Clock",
+      "y": 0,
+      "id": 12
     },
     {
-      "id": 40,
-      "x": 1691,
-      "w": 205,
-      "layer": 3,
-      "h": 285,
+      "h": 24,
+      "w": 1920,
+      "id": 31,
+      "owner": "Window Server",
+      "x": 0,
+      "y": 0,
+      "layer": 24,
+      "name": "Menubar"
+    },
+    {
       "y": 777,
+      "owner": "osascript",
       "name": "桌面小伙伴",
-      "owner": "osascript"
+      "id": 39,
+      "w": 205,
+      "h": 285,
+      "layer": 3,
+      "x": 1691
     },
     {
       "owner": "osascript",
-      "name": "",
-      "id": 38,
+      "w": 1920,
+      "layer": 0,
       "x": 0,
       "y": 0,
-      "h": 1080,
-      "layer": 0,
-      "w": 1920
+      "id": 36,
+      "name": "",
+      "h": 1080
     }
   ],
   "screens": [
