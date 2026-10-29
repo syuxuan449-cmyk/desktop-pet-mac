@@ -9,4 +9,6 @@ if /usr/bin/pgrep -f "Resources/DesktopPet.js" >/dev/null 2>&1; then
   exit 0
 fi
 echo "==== $(date '+%Y-%m-%d %H:%M:%S') 启动 ====" >>"$LOG" 2>/dev/null
-exec /usr/bin/osascript -l JavaScript "$RES/DesktopPet.js" "$RES" >>"$LOG" 2>&1
+# Second argument is the CPU arch so JXA can pick the ObjC BOOL encoding
+# (signed char on x86_64, C bool on arm64) before any subclass is registered.
+exec /usr/bin/osascript -l JavaScript "$RES/DesktopPet.js" "$RES" "$(uname -m)" >>"$LOG" 2>&1

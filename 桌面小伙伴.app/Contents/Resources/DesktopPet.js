@@ -18,6 +18,7 @@ var S = {
   isSleeping: false,
   isDancing: false,
   isAngry: false,
+  quitRequested: false,
   spankCooldownUntil: 0,
   pointerDown: false,
   dragStarted: false,
@@ -97,16 +98,30 @@ function font(size, weight) {
 }
 
 function attr(text, fnt, color, centered) {
-  var keys = ['NSFont', 'NSColor'];
-  var vals = [fnt, color];
+  // initWithString:attributes: is not exported by the JXA bridge on Sequoia
+  // ("initWithStringAttributes is not a function"), so build the string with
+  // addAttribute:value:range: instead.
+  var s = $.NSMutableAttributedString.alloc.initWithString(String(text));
+  var len = Number(s.length);
+  var range = $.NSMakeRange(0, len);
+  function add(key, val) {
+    if (!val) return;
+    s.addAttributeValueRange(key, val, range);
+  }
+  add($.NSFontAttributeName, fnt);
+  add($.NSForegroundColorAttributeName, color);
   if (centered) {
     var p = $.NSMutableParagraphStyle.alloc.init;
-    p.setAlignment(2); // NSTextAlignmentCenter (macOS)
-    keys.push('NSParagraphStyle');
-    vals.push(p);
+    var align = 2; // macOS NSTextAlignmentCenter / NSCenterTextAlignment
+    try {
+      if ($.NSTextAlignmentCenter !== undefined && $.NSTextAlignmentCenter !== null) {
+        align = Number($.NSTextAlignmentCenter);
+      }
+    } catch (e) {}
+    p.setAlignment(align);
+    add($.NSParagraphStyleAttributeName, p);
   }
-  var dict = $.NSDictionary.dictionaryWithObjectsForKeys($(vals), $(keys));
-  return $.NSAttributedString.alloc.initWithStringAttributes(text, dict);
+  return s;
 }
 
 function makeBox(frame, fill, border, borderWidth, radius) {
@@ -152,7 +167,9 @@ function placeIn(parent, child, x, yTop, w, h) {
 
 // ---------- 图层坐标（自动适配是否翻转） ----------
 function layerFlipped(hostLayer) {
-  try { return !!hostLayer.contentsAreFlipped; } catch (e) { return !!hostLayer.isGeometryFlipped; }
+  // contentsAreFlipped describes bitmap orientation, not the y axis.
+  // Only geometryFlipped swaps the layer's coordinate system.
+  try { return !!hostLayer.isGeometryFlipped; } catch (e) { return false; }
 }
 // 以“左上角为原点、y 向下”的坐标给图层定位
 function placeLayer(hostLayer, layer, x, y, w, h) {
@@ -175,7 +192,7 @@ function basicAnim(keyPath, from, to, durMs, autoReverse, forever, timing) {
   a.setToValue(num(to));
   a.setDuration(durMs / 1000);
   if (autoReverse) a.setAutoreverses(true);
-  if (forever) a.setRepeatCount(Infinity);
+  if (forever) a.setRepeatCount(1e9);
   if (timing) a.setTimingFunction($.CAMediaTimingFunction.functionWithName(timing));
   return a;
 }
@@ -189,7 +206,9 @@ function startTimer(name, ms, repeats) {
   stopTimer(name);
   try {
     var t = $.NSTimer.timerWithTimeIntervalTargetSelectorUserInfoRepeats(ms / 1000, UI.controller, TIMER_SEL[name], null, !!repeats);
-    $.NSRunLoop.currentRunLoop.addTimerForMode(t, 'kCFRunLoopCommonModes');
+    var mode = $.NSRunLoopCommonModes;
+    if (!mode) mode = 'NSRunLoopCommonModes';
+    $.NSRunLoop.currentRunLoop.addTimerForMode(t, mode);
     S.timers[name] = t;
     log('TIMER start ' + name + ' ' + ms + 'ms repeats=' + (!!repeats));
   } catch (e) {
@@ -515,6 +534,7 @@ function setToolbarVisible(v) {
 }
 
 function quitPet() {
+  S.quitRequested = true;
   log('ACTION quit');
   ['bubble', 'state', 'dance', 'angry', 'chatter', 'cleanup'].forEach(stopTimer);
   try { stopDanceAnimation(); stopAngerAnimation(); } catch (e) {}
@@ -629,12 +649,44 @@ function showMoreMenu() {
 }
 
 // ---------- Objective-C 子类 ----------
+// macOS x86_64 encodes BOOL as signed char ('c'); arm64 encodes it as C bool ('B').
+// JXA's 'bool' alias is 'B', so Intel rejects the subclass ("method types do not match").
+function hostArch() {
+  try {
+    var args = $.NSProcessInfo.processInfo.arguments;
+    var n = Number(args.count);
+    for (var i = 0; i < n; i++) {
+      var o = args.objectAtIndex(i);
+      var s = String(o.js !== undefined ? o.js : o);
+      if (s === 'x86_64' || s === 'arm64' || s === 'i386') return s;
+    }
+  } catch (e) {}
+  try {
+    var task = $.NSTask.alloc.init;
+    task.setLaunchPath('/usr/bin/uname');
+    task.setArguments($(['-m']));
+    var pipe = $.NSPipe.pipe;
+    task.setStandardOutput(pipe);
+    task.launch;
+    task.waitUntilExit;
+    var data = pipe.fileHandleForReading.readDataToEndOfFile;
+    var str = $.NSString.alloc.initWithDataEncoding(data, 4);
+    return String(str.js !== undefined ? str.js : str).replace(/\s+/g, '');
+  } catch (e2) {
+    return 'unknown';
+  }
+}
+var HOST_ARCH = hostArch();
+var BOOL_ENC = HOST_ARCH.indexOf('arm') === 0 ? 'B' : 'c';
+function objcYes() { return 1; }
+try { log('ARCH ' + HOST_ARCH + ' BOOL ' + BOOL_ENC); } catch (e) {}
+
 ObjC.registerSubclass({
   name: 'DPPetWindow',
   superclass: 'NSWindow',
   methods: {
-    'canBecomeKeyWindow': { types: ['bool', []], implementation: function () { return true; } },
-    'canBecomeMainWindow': { types: ['bool', []], implementation: function () { return true; } }
+    'canBecomeKeyWindow': { types: [BOOL_ENC, []], implementation: function () { return objcYes(); } },
+    'canBecomeMainWindow': { types: [BOOL_ENC, []], implementation: function () { return objcYes(); } }
   }
 });
 
@@ -642,7 +694,7 @@ ObjC.registerSubclass({
   name: 'DPButton',
   superclass: 'NSButton',
   methods: {
-    'acceptsFirstMouse:': { types: ['bool', ['id']], implementation: function (e) { return true; } }
+    'acceptsFirstMouse:': { types: [BOOL_ENC, ['id']], implementation: function (e) { return objcYes(); } }
   }
 });
 
@@ -650,9 +702,9 @@ ObjC.registerSubclass({
   name: 'DPPetView',
   superclass: 'NSView',
   methods: {
-    'isFlipped': { types: ['bool', []], implementation: function () { return true; } },
-    'acceptsFirstResponder': { types: ['bool', []], implementation: function () { return true; } },
-    'acceptsFirstMouse:': { types: ['bool', ['id']], implementation: function (e) { return true; } },
+    'isFlipped': { types: [BOOL_ENC, []], implementation: function () { return objcYes(); } },
+    'acceptsFirstResponder': { types: [BOOL_ENC, []], implementation: function () { return objcYes(); } },
+    'acceptsFirstMouse:': { types: [BOOL_ENC, ['id']], implementation: function (e) { return objcYes(); } },
     'mouseDown:': { types: ['void', ['id']], implementation: safe('mouseDown', onMouseDown) },
     'mouseDragged:': { types: ['void', ['id']], implementation: safe('mouseDragged', onMouseDragged) },
     'mouseUp:': { types: ['void', ['id']], implementation: safe('mouseUp', onMouseUp) },
@@ -709,6 +761,7 @@ ObjC.registerSubclass({
 function makeLayerHost(frame) {
   var v = $.NSView.alloc.initWithFrame(frame);
   var l = $.CALayer.layer;
+  l.setGeometryFlipped(false);
   v.setLayer(l);
   v.setWantsLayer(true); // layer-hosting：图层完全由我们控制
   return v;
@@ -764,6 +817,7 @@ function buildUI() {
   view.addSubview(petHost);
   UI.petHost = petHost;
   var petLayer = $.CALayer.layer;
+  petLayer.setGeometryFlipped(false);
   petLayer.setContentsGravity('resizeAspect');
   petLayer.setContentsScale(UI.scale);
   petHost.layer.addSublayer(petLayer);
@@ -857,6 +911,20 @@ function run(argv) {
 
     UI.app.run;
     log('ACTION run-returned');
+    // osascript sometimes returns from NSApplication.run immediately.
+    // Keep draining events so timers and clicks still run.
+    if (!S.quitRequested) {
+      log('ACTION manual-runloop');
+      var mask = -1;
+      try { if ($.NSEventMaskAny) mask = $.NSEventMaskAny; } catch (e) {}
+      var loopMode = $.NSDefaultRunLoopMode || 'NSDefaultRunLoopMode';
+      while (!S.quitRequested) {
+        var ev = UI.app.nextEventMatchingMaskUntilDateInModeDequeue(
+          mask, $.NSDate.dateWithTimeIntervalSinceNow(0.25), loopMode, true);
+        if (ev && !ev.isNil()) UI.app.sendEvent(ev);
+        UI.app.updateWindows;
+      }
+    }
   } catch (e) {
     log('启动失败: ' + e + (e && e.stack ? '\n' + e.stack : ''));
     try {
