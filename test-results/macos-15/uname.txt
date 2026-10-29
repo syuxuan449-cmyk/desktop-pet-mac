@@ -1,0 +1,1 @@
+Darwin sjc20-bb661-9e3f0c7f-9d7c-4422-a302-ddef670062b9-D2B47512F3BA.local 24.6.0 Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:34 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_VMAPPLE arm64
